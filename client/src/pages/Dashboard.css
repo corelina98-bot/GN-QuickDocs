@@ -1,0 +1,77 @@
+/* client/src/pages/Dashboard.css */
+
+.gn-dashboard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.gn-dashboard-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 560px;
+}
+
+.gn-ai-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.gn-ai-prompt {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.gn-ai-label {
+  align-self: flex-start;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+
+.gn-ai-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--teal-50);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+}
+
+.gn-ai-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: var(--ink);
+  outline: none;
+  font-family: var(--font-body);
+}
+
+.gn-ai-bar input::placeholder { color: var(--ink-faint); }
+
+.gn-ai-icon-btn {
+  background: none;
+  border: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+}
+.gn-ai-icon-btn:hover { background: var(--teal-200); }
+
+.gn-ai-send {
+  background: var(--ink);
+  color: var(--white);
+}
+.gn-ai-send:hover { background: var(--teal-700); }

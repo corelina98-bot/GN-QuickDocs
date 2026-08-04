@@ -1,0 +1,43 @@
+/* client/src/pages/GNDetails.css */
+
+.gn-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.gn-details-row {
+  display: grid;
+  grid-template-columns: 120px 12px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.gn-details-label { font-weight: 500; }
+
+.gn-details-row input {
+  background: var(--teal-50);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.gn-location-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  background: var(--teal-200);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  padding: 9px 18px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.gn-location-btn:hover { background: var(--teal-300); }

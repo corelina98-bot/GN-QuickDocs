@@ -1,0 +1,109 @@
+/* client/src/pages/Welcome.css */
+
+.gn-welcome {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--teal-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Ambient drifting shapes — slow, soft, document/paper-like ovals
+   evoking forms and stamps circulating, suited to a civic-services theme */
+.gn-welcome-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.gn-drift {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(255,255,255,0) 70%);
+  filter: blur(2px);
+  animation: gn-drift-move 22s ease-in-out infinite;
+}
+
+.gn-drift-1 { width: 320px; height: 320px; top: -80px; left: -60px; animation-duration: 26s; }
+.gn-drift-2 { width: 220px; height: 220px; bottom: -60px; right: 10%; animation-duration: 20s; animation-delay: -4s; }
+.gn-drift-3 { width: 160px; height: 160px; top: 20%; right: -40px; animation-duration: 24s; animation-delay: -10s; }
+.gn-drift-4 { width: 260px; height: 260px; bottom: 10%; left: 8%; animation-duration: 30s; animation-delay: -6s; }
+
+@keyframes gn-drift-move {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(30px, -24px) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.gn-welcome-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.gn-welcome-logo-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gn-welcome-logo-circle:hover,
+.gn-welcome:focus-visible .gn-welcome-logo-circle {
+  transform: scale(1.06);
+  box-shadow: 0 0 40px 6px rgba(255,255,255,0.7), 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.gn-welcome-logo-text {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--teal-700);
+  line-height: 1;
+}
+
+.gn-welcome-logo-sub {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--teal-600);
+  font-weight: 600;
+}
+
+.gn-welcome-title {
+  font-size: 56px;
+  letter-spacing: 6px;
+  color: var(--ink);
+  margin: 0;
+  transition: transform 0.35s ease, text-shadow 0.35s ease, color 0.35s ease;
+}
+
+.gn-welcome-title:hover,
+.gn-welcome:focus-visible .gn-welcome-title {
+  transform: scale(1.05);
+  color: var(--white);
+  text-shadow: 0 0 24px rgba(255,255,255,0.85);
+}
+
+.gn-welcome-hint {
+  font-size: 13px;
+  color: rgba(22,38,43,0.6);
+  letter-spacing: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gn-drift { animation: none; }
+}

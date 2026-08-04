@@ -1,0 +1,52 @@
+{
+  "welcome": "Welcome to GN QuickDocs",
+  "login": "Login",
+  "register": "Register",
+  "newDocument": "New Document",
+  "save": "Save",
+
+  "common": {
+    "search": "Search",
+    "close": "Close"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "gramaNiladhari": "Grama Niladhari",
+    "services": "Services",
+    "whatDoYouWantToKnow": "What do you want to know?",
+    "aiAssistant": "AI Assisstant",
+    "askAnything": "Ask anything here"
+  },
+
+  "aiAssistant": {
+    "title": "AI Assistant",
+    "noQuestion": "Ask a question from the dashboard to see the answer here.",
+    "thinking": "Thinking…"
+  },
+
+  "services": {
+    "title": "Services",
+    "comingSoon": "Details for this service are coming soon.",
+    "viewSample": "View a sample of this document",
+    "sampleComingSoon": "A sample image for this document will be added here."
+  },
+
+  "gnList": {
+    "title": "Grama Niladhari Division List",
+    "browseHeading": "Browse GN Division List",
+    "province": "Province",
+    "district": "District",
+    "gnDivision": "GN Division"
+  },
+
+  "gnDetails": {
+    "title": "Grama Niladhari - Details",
+    "name": "Name",
+    "contactNo": "Contact No",
+    "email": "Email",
+    "availableDates": "Available Dates",
+    "viewLocation": "View location on map",
+    "locationTitle": "Office Location"
+  }
+}

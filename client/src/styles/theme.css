@@ -1,0 +1,88 @@
+/* client/src/styles/theme.css
+   Import this once in main.jsx: import "./styles/theme.css";
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Core palette — sampled from the GN QuickDocs mockups */
+  --teal-50: #eafcfc;
+  --teal-100: #d7f3f4;
+  --teal-200: #c3ecec;
+  --teal-300: #a3e2e4;
+  --teal-400: #7fd3d8;
+  --teal-500: #62c2c9;
+  --teal-600: #4aabb3;
+  --teal-700: #388890;
+
+  --ink: #16262b;
+  --ink-soft: #4c6066;
+  --ink-faint: #8aa0a4;
+
+  --card-bg: #e3f5f5;
+  --card-bg-hover: #d3eeee;
+  --card-border: #bfe4e5;
+
+  --white: #ffffff;
+  --link: #2f9aa6;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 6px rgba(22, 38, 43, 0.08);
+  --shadow-md: 0 6px 20px rgba(22, 38, 43, 0.12);
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --header-gradient: linear-gradient(90deg, var(--teal-50) 0%, var(--teal-400) 100%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+}
+
+h1, h2, h3, .font-display { font-family: var(--font-display); }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { font-family: inherit; cursor: pointer; }
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--teal-600);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Shared page shell used by every screen after the splash page */
+.gn-page {
+  max-width: 960px;
+  margin: 32px auto;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--white);
+}
+
+.gn-page-body {
+  padding: 28px 32px 40px;
+}

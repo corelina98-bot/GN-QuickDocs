@@ -1,0 +1,52 @@
+{
+  "welcome": "GN QuickDocs වෙත සාදරයෙන් පිළිගනිමු",
+  "login": "පිවිසෙන්න",
+  "register": "ලියාපදිංචි වන්න",
+  "newDocument": "නව ලේඛනය",
+  "save": "සුරකින්න",
+
+  "common": {
+    "search": "සොයන්න",
+    "close": "වසන්න"
+  },
+
+  "dashboard": {
+    "title": "උපකරණ පුවරුව",
+    "gramaNiladhari": "ග්‍රාම නිලධාරී",
+    "services": "සේවා",
+    "whatDoYouWantToKnow": "What do you want to know?",
+    "aiAssistant": "AI Assisstant",
+    "askAnything": "Ask anything here"
+  },
+
+  "aiAssistant": {
+    "title": "AI සහායක",
+    "noQuestion": "පිළිතුර බැලීමට උපකරණ පුවරුවෙන් ප්‍රශ්නයක් අසන්න.",
+    "thinking": "සිතමින්…"
+  },
+
+  "services": {
+    "title": "සේවා",
+    "comingSoon": "මෙම සේවාව සඳහා විස්තර ඉක්මනින් එකතු කරනු ලැබේ.",
+    "viewSample": "මෙම ලේඛනයේ නියැදිය බලන්න",
+    "sampleComingSoon": "මෙම ලේඛනයේ නියැදි රූපයක් මෙහි එකතු කරනු ලැබේ."
+  },
+
+  "gnList": {
+    "title": "ග්‍රාම නිලධාරී කොට්ඨාස ලැයිස්තුව",
+    "browseHeading": "ග්‍රාම නිලධාරී කොට්ඨාස ලැයිස්තුව බලන්න",
+    "province": "පළාත",
+    "district": "දිස්ත්‍රික්කය",
+    "gnDivision": "ග්‍රාම නිලධාරී වසම"
+  },
+
+  "gnDetails": {
+    "title": "ග්‍රාම නිලධාරී - විස්තර",
+    "name": "නම",
+    "contactNo": "දුරකථන අංකය",
+    "email": "විද්‍යුත් තැපෑල",
+    "availableDates": "ලබාගත හැකි දිනයන්",
+    "viewLocation": "සිතියමේ ස්ථානය බලන්න",
+    "locationTitle": "කාර්යාල ස්ථානය"
+  }
+}

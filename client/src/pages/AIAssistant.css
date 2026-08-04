@@ -1,0 +1,28 @@
+/* client/src/pages/AIAssistant.css */
+
+.gn-ai-problem {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  margin: 8px auto 20px;
+  max-width: 420px;
+}
+
+.gn-ai-answer {
+  background: var(--teal-50);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  min-height: 220px;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.gn-ai-loading { color: var(--ink-soft); }
+.gn-ai-error { color: #b3423f; font-style: normal; }

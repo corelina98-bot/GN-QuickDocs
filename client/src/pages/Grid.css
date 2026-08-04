@@ -1,0 +1,27 @@
+/* client/src/pages/Grid.css */
+
+.gn-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.gn-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gn-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 640px;
+}
+
+@media (max-width: 640px) {
+  .gn-grid-3, .gn-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gn-empty-note {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 14px;
+}

@@ -1,0 +1,111 @@
+/* client/src/components/Header.css */
+
+.gn-header-wrap {
+  background: var(--white);
+}
+
+.gn-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  background: var(--header-gradient);
+}
+
+.gn-logo { display: inline-flex; }
+
+.gn-logo-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.gn-logo-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--teal-700);
+  letter-spacing: 0.5px;
+}
+
+.gn-header-title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.gn-menu-btn {
+  background: none;
+  border: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.gn-menu-btn:hover { background: rgba(255,255,255,0.4); }
+
+.gn-subbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.gn-back-btn {
+  background: none;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.gn-back-btn:hover { background: var(--teal-50); }
+
+.gn-breadcrumb {
+  flex: 1;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.gn-crumb-current { color: var(--ink); font-weight: 500; }
+.gn-crumb-link { color: var(--link); }
+.gn-crumb-sep { color: var(--ink-faint); }
+
+.gn-lang-switch {
+  display: flex;
+  gap: 6px;
+}
+
+.gn-lang-btn {
+  border: none;
+  background: var(--teal-300);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease;
+}
+
+.gn-lang-btn:hover { background: var(--teal-400); }
+
+.gn-lang-btn.active {
+  background: var(--teal-600);
+  color: var(--white);
+}

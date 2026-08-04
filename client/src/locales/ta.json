@@ -1,0 +1,52 @@
+{
+  "welcome": "GN QuickDocs க்கு வரவேற்கிறோம்",
+  "login": "உள்நுழைய",
+  "register": "பதிவு செய்ய",
+  "newDocument": "புதிய ஆவணம்",
+  "save": "சேமிக்க",
+
+  "common": {
+    "search": "தேடல்",
+    "close": "மூடு"
+  },
+
+  "dashboard": {
+    "title": "டாஷ்போர்டு",
+    "gramaNiladhari": "கிராம அலுவலர்",
+    "services": "சேவைகள்",
+    "whatDoYouWantToKnow": "What do you want to know?",
+    "aiAssistant": "AI Assisstant",
+    "askAnything": "Ask anything here"
+  },
+
+  "aiAssistant": {
+    "title": "AI உதவியாளர்",
+    "noQuestion": "பதிலைக் காண, டாஷ்போர்டில் ஒரு கேள்வியைக் கேளுங்கள்.",
+    "thinking": "யோசிக்கிறது…"
+  },
+
+  "services": {
+    "title": "சேவைகள்",
+    "comingSoon": "இந்த சேவைக்கான விவரங்கள் விரைவில் வழங்கப்படும்.",
+    "viewSample": "இந்த ஆவணத்தின் மாதிரியைப் பார்க்க",
+    "sampleComingSoon": "இந்த ஆவணத்தின் மாதிரி படம் விரைவில் சேர்க்கப்படும்."
+  },
+
+  "gnList": {
+    "title": "கிராம அலுவலர் பிரிவு பட்டியல்",
+    "browseHeading": "கிராம அலுவலர் பிரிவு பட்டியலை உலாவுக",
+    "province": "மாகாணம்",
+    "district": "மாவட்டம்",
+    "gnDivision": "கிராம அலுவலர் பிரிவு"
+  },
+
+  "gnDetails": {
+    "title": "கிராம அலுவலர் - விவரங்கள்",
+    "name": "பெயர்",
+    "contactNo": "தொடர்பு எண்",
+    "email": "மின்னஞ்சல்",
+    "availableDates": "கிடைக்கும் தேதிகள்",
+    "viewLocation": "இருப்பிடத்தை வரைபடத்தில் காண",
+    "locationTitle": "அலுவலக இருப்பிடம்"
+  }
+}

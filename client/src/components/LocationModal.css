@@ -1,0 +1,38 @@
+/* client/src/components/LocationModal.css */
+
+.gn-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(22, 38, 43, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.gn-location-modal {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  max-width: 480px;
+  width: 92%;
+  box-shadow: var(--shadow-md);
+}
+
+.gn-location-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.gn-modal-x {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  display: flex;
+  padding: 4px;
+  border-radius: 50%;
+}
+.gn-modal-x:hover { background: var(--teal-100); }
