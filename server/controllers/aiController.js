@@ -1,11 +1,22 @@
+// server/controllers/aiController.js
 import OpenAI from "openai";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+let openai;
+
+// Created lazily (on first request) instead of at import time, so it never
+// runs before dotenv.config() has loaded your .env file.
+function getOpenAIClient() {
+  if (!openai) {
+    openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  }
+  return openai;
+}
 
 export const generateContent = async (req, res) => {
   const { prompt, language } = req.body;
   try {
-    const completion = await openai.chat.completions.create({
+    const client = getOpenAIClient();
+    const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         {
