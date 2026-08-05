@@ -24,32 +24,50 @@ function AIAssistant() {
     let cancelled = false;
     setLoading(true);
     setError("");
+    setAnswer("");
 
     api
       .post("/ai/generate", { prompt: question, language: i18n.language })
       .then((res) => {
-        if (!cancelled) setAnswer(res.data.result);
+        if (!cancelled) setAnswer(res.data.result || "");
       })
       .catch((err) => {
-        if (!cancelled) setError(err.response?.data?.message || "Something went wrong. Please try again.");
+        if (cancelled) return;
+        if (err.response?.status === 429) {
+          setError(
+            "The AI service is busy right now. Please wait a moment and try again."
+          );
+        } else {
+          setError(
+            err.response?.data?.message ||
+              "Something went wrong. Please try again."
+          );
+        }
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
       });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [question, i18n.language]);
 
   return (
     <div className="gn-page">
       <Header
         title={t("aiAssistant.title")}
-        crumbs={[{ label: t("dashboard.title"), to: "/dashboard" }, { label: t("aiAssistant.title") }]}
+        crumbs={[
+          { label: t("dashboard.title"), to: "/dashboard" },
+          { label: t("aiAssistant.title") },
+        ]}
         showBack
       />
 
       <div className="gn-page-body">
-        <div className="gn-ai-problem font-display">{question || t("aiAssistant.noQuestion")}</div>
+        <div className="gn-ai-problem font-display">
+          {question || t("aiAssistant.noQuestion")}
+        </div>
 
         <div className="gn-ai-answer font-display">
           {loading && <span className="gn-ai-loading">{t("aiAssistant.thinking")}</span>}
