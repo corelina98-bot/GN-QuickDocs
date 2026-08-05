@@ -1,9 +1,11 @@
 // client/src/pages/Welcome.jsx
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Welcome.css";
 
 function Welcome() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="gn-welcome" onClick={() => navigate("/dashboard")} role="button" tabIndex={0}
@@ -24,8 +26,8 @@ function Welcome() {
             <span className="gn-welcome-logo-sub">QUICKDOCS</span>
           </div>
         </div>
-        <h1 className="gn-welcome-title font-display">WELCOME</h1>
-        <p className="gn-welcome-hint">Tap anywhere to begin</p>
+        <h1 className="gn-welcome-title font-display">{t("welcome.title")}</h1>
+        <p className="gn-welcome-hint">{t("welcome.hint")}</p>
       </div>
     </div>
   );

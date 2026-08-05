@@ -8,12 +8,12 @@ import "./GNDivisionList.css";
 
 // Replace with a real fetch to GET /api/gn-divisions?province=&district= once the
 // backend endpoint exists. Kept as static placeholders so the form is wireable now.
-const PROVINCES = ["Western", "Eastern", "Central", "Southern", "Northern"];
-const DISTRICTS = ["Colombo", "Ampara", "Batticaloa", "Kandy", "Galle"];
-const GN_DIVISIONS = ["Division 001", "Division 002", "Division 003"];
-
 function GNDivisionList() {
   const { t } = useTranslation();
+  // Localized placeholder arrays (from locale files) so they follow the selected language.
+  const PROVINCES = t("gnList.provinces", { returnObjects: true });
+  const DISTRICTS = t("gnList.districts", { returnObjects: true });
+  const GN_DIVISIONS = t("gnList.divisions", { returnObjects: true });
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [province, setProvince] = useState("");

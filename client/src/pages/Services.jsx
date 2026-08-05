@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 import * as Icons from "lucide-react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
-import servicesData from "../data/servicesData";
+import { getLocalizedServices } from "../data/servicesData";
 import "./Grid.css";
 
 function Services() {
   const { t } = useTranslation();
+  const services = getLocalizedServices(t);
 
   return (
     <div className="gn-page">
@@ -18,7 +19,7 @@ function Services() {
 
       <div className="gn-page-body">
         <div className="gn-grid gn-grid-3">
-          {Object.entries(servicesData).map(([slug, category]) => {
+          {Object.entries(services).map(([slug, category]) => {
             const Icon = Icons[category.icon] ?? Icons.CircleHelp;
             return (
               <ServiceCard

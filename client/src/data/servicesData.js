@@ -1,133 +1,153 @@
-// client/src/data/servicesData.js
 //
 // Single source of truth for the Services > Category > Sub-service > Checklist
 // screens. Add a new service by adding an entry here — no new components needed,
 // CategoryDetail.jsx and DocumentChecklist.jsx read everything from this file.
 //
 // icon names refer to lucide-react icon component names (imported where used).
+//
+// Localization: structure, icons and slugs live here. Human-readable labels and
+// checklist documents are fetched from the i18n locale files via
+// getLocalizedServices(t). That way switching EN/SI/TA on the header instantly
+// translates every service screen.
 
 const servicesData = {
   "civil-registrations": {
-    label: "Civil Registrations",
     icon: "UserRound",
     subServices: {
       "registration-of-past-births": {
-        label: "Registration of Past Births",
         icon: "Baby",
-        documents: [
-          "Pension Award Letter / Pension File",
-          "National Identity Card (NIC)",
-          "Marriage certificate of parents (if applicable)",
-          "Affidavit confirming birth details (if record missing)",
-          "Two witnesses' statements confirming birth details",
+        documentKeys: [
+          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.0",
+          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.1",
+          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.2",
+          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.3",
+          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.4",
         ],
       },
       "providing-report-on-death-persons": {
-        label: "Providing Report on Death Persons",
         icon: "Ribbon",
-        documents: [
-          "Medical certificate of cause of death",
-          "National Identity Card of the deceased",
-          "Informant's NIC",
-          "If death occurred outside hospital – police report may be required",
+        documentKeys: [
+          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.0",
+          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.1",
+          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.2",
+          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.3",
         ],
       },
       "issuing-of-character-resident-certificate": {
-        label: "Issuing of Character/Resident Certificate",
         icon: "FileBadge",
-        documents: [
-          "Identity Card",
-          "Proof of residence (utility bills, property documents, or witnesses)",
-          "Grama Niladhari's verification of residence",
-          "Affidavit confirming birth details (if record missing)",
-          "Two witnesses' statements confirming birth details",
+        documentKeys: [
+          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.0",
+          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.1",
+          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.2",
+          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.3",
+          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.4",
         ],
       },
       "certifying-identity-card-applications": {
-        label: "Certifying Identity Card Applications",
         icon: "IdCard",
-        documents: [
-          "Completed NIC application form",
-          "Birth certificate",
-          "Proof of residence",
-          "Photograph (as per Department of Registration of Persons guidelines)",
+        documentKeys: [
+          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.0",
+          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.1",
+          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.2",
+          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.3",
         ],
       },
     },
   },
 
   "payment-of-pensions": {
-    label: "Payment of Pensions",
     icon: "HandCoins",
     subServices: {
       "for-new-pensioners": {
-        label: "For New Pensioners",
         icon: "Accessibility",
-        documents: [
-          "Pension Award Letter / Pension File",
-          "National Identity Card (NIC)",
-          "Bank Account Details",
-          "Grama Niladhari Certificate / Residency Confirmation",
-          "Birth Certificate",
-          "Retirement Letter / Last Salary Slip",
-          "Photographs (passport-size — for identity confirmation)",
-          "Duly completed Pension Application Form (Form P1 or equivalent)",
+        documentKeys: [
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.0",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.1",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.2",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.3",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.4",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.5",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.6",
+          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.7",
         ],
       },
       "for-ongoing-pension-payments": {
-        label: "For Ongoing Pension Payments",
         icon: "Users",
-        documents: [
-          "Life Certificate (certified annually, usually by Grama Niladhari or Divisional Secretary)",
-          "National Identity Card",
-          "Bank Passbook / Account Details",
+        documentKeys: [
+          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.0",
+          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.1",
+          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.2",
         ],
       },
       "for-change-of-address-or-bank": {
-        label: "For Change of Address or Bank",
         icon: "Landmark",
-        documents: [
-          "Request Letter by Pensioner",
-          "New Bank Account Details (Certified by Bank)",
-          "NIC Copy",
-          "Grama Niladhari Certificate (New Residence Confirmation)",
-          "Original Pension Card / Book (if applicable)",
+        documentKeys: [
+          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.0",
+          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.1",
+          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.2",
+          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.3",
+          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.4",
         ],
       },
       "for-restoration-or-resumption-of-pension": {
-        label: "For Restoration or Resumption of Pension",
         icon: "RefreshCcw",
-        documents: [
-          "Explanation Letter (reason for non-collection or delay)",
-          "Life Certificate",
-          "NIC Copy",
-          "Bank Account Verification Letter",
-          "Approval from Department of Pensions (if required)",
+        documentKeys: [
+          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.0",
+          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.1",
+          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.2",
+          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.3",
+          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.4",
         ],
       },
       "for-nominee-heirs": {
-        label: "For Nominee / Heirs (After Death of Pensioner)",
         icon: "HeartHandshake",
-        documents: [
-          "Death Certificate of Pensioner",
-          "Marriage Certificate (for spouse)",
-          "Birth Certificates of Dependents (if children are eligible)",
-          "NICs of Claimants",
-          "Affidavit confirming relationship",
-          "Recommendation by Grama Niladhari and Divisional Secretary",
-          "Pension File Number",
+        documentKeys: [
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.0",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.1",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.2",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.3",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.4",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.5",
+          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.6",
         ],
       },
     },
   },
 
-  "samurdhi-program": { label: "Samurdhi Program", icon: "Users", subServices: {} },
-  "issuance-of-permit": { label: "Issuance of Permit", icon: "ScrollText", subServices: {} },
-  "land-administration": { label: "Land Administration", icon: "Landmark", subServices: {} },
-  "procurements": { label: "Procurements", icon: "Truck", subServices: {} },
-  "issuing-of-certificate": { label: "Issuing of Certificate", icon: "FileBadge2", subServices: {} },
-  "social-welfare": { label: "Social Welfare", icon: "Globe2", subServices: {} },
-  "fill-progress-form": { label: "Fill Progress Form", icon: "ClipboardList", subServices: {} },
+  "samurdhi-program": { icon: "Users", subServices: {} },
+  "issuance-of-permit": { icon: "ScrollText", subServices: {} },
+  "land-administration": { icon: "Landmark", subServices: {} },
+  "procurements": { icon: "Truck", subServices: {} },
+  "issuing-of-certificate": { icon: "FileBadge2", subServices: {} },
+  "social-welfare": { icon: "Globe2", subServices: {} },
+  "fill-progress-form": { icon: "ClipboardList", subServices: {} },
 };
+
+/**
+ * Returns a localized copy of servicesData where every label and checklist
+ * document is resolved through the i18next `t` function.
+ *
+ * @param {Function} t - the i18next translation function from useTranslation()
+ * @returns {Object} a services data object with localized labels/documents
+ */
+export function getLocalizedServices(t) {
+  const localized = {};
+  Object.entries(servicesData).forEach(([categorySlug, category]) => {
+    const locCategory = {
+      label: t(`serviceContent.${categorySlug}.label`),
+      icon: category.icon,
+      subServices: {},
+    };
+    Object.entries(category.subServices || {}).forEach(([subSlug, sub]) => {
+      locCategory.subServices[subSlug] = {
+        icon: sub.icon,
+        label: t(`serviceContent.${categorySlug}.subServices.${subSlug}.label`),
+        documents: (sub.documentKeys || []).map((key) => t(key)),
+      };
+    });
+    localized[categorySlug] = locCategory;
+  });
+  return localized;
+}
 
 export default servicesData;

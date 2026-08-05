@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { CheckSquare, Eye } from "lucide-react";
 import * as Icons from "lucide-react";
 import Header from "../components/Header";
-import servicesData from "../data/servicesData";
+import { getLocalizedServices } from "../data/servicesData";
 import "./DocumentChecklist.css";
 
 function DocumentChecklist() {
@@ -13,7 +13,8 @@ function DocumentChecklist() {
   const { categorySlug, subServiceSlug } = useParams();
   const [previewDoc, setPreviewDoc] = useState(null);
 
-  const category = servicesData[categorySlug];
+  const services = getLocalizedServices(t);
+  const category = services[categorySlug];
   const subService = category?.subServices?.[subServiceSlug];
 
   if (!category || !subService) return <Navigate to="/services" replace />;

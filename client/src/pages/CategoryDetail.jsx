@@ -4,13 +4,14 @@ import { useTranslation } from "react-i18next";
 import * as Icons from "lucide-react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
-import servicesData from "../data/servicesData";
+import { getLocalizedServices } from "../data/servicesData";
 import "./Grid.css";
 
 function CategoryDetail() {
   const { t } = useTranslation();
   const { categorySlug } = useParams();
-  const category = servicesData[categorySlug];
+  const services = getLocalizedServices(t);
+  const category = services[categorySlug];
 
   if (!category) return <Navigate to="/services" replace />;
 

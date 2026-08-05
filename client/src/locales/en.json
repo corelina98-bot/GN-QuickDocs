@@ -1,15 +1,16 @@
 {
-  "welcome": "Welcome to GN QuickDocs",
+  "welcome": {
+    "title": "WELCOME",
+    "hint": "Tap anywhere to begin"
+  },
   "login": "Login",
   "register": "Register",
   "newDocument": "New Document",
   "save": "Save",
-
   "common": {
     "search": "Search",
     "close": "Close"
   },
-
   "dashboard": {
     "title": "Dashboard",
     "gramaNiladhari": "Grama Niladhari",
@@ -18,28 +19,27 @@
     "aiAssistant": "AI Assistant",
     "askAnything": "Type or speak your question..."
   },
-
   "aiAssistant": {
     "title": "AI Assistant",
     "noQuestion": "Ask a question from the dashboard to see the answer here.",
     "thinking": "Thinking…"
   },
-
   "services": {
     "title": "Services",
     "comingSoon": "Details for this service are coming soon.",
     "viewSample": "View a sample of this document",
     "sampleComingSoon": "A sample image for this document will be added here."
   },
-
   "gnList": {
     "title": "Grama Niladhari Division List",
     "browseHeading": "Browse GN Division List",
     "province": "Province",
     "district": "District",
-    "gnDivision": "GN Division"
+    "gnDivision": "GN Division",
+    "provinces": ["Western", "Eastern", "Central", "Southern", "Northern"],
+    "districts": ["Colombo", "Ampara", "Batticaloa", "Kandy", "Galle"],
+    "divisions": ["Division 001", "Division 002", "Division 003"]
   },
-
   "gnDetails": {
     "title": "Grama Niladhari - Details",
     "name": "Name",
@@ -48,5 +48,136 @@
     "availableDates": "Available Dates",
     "viewLocation": "View location on map",
     "locationTitle": "Office Location"
+  },
+  "serviceContent": {
+    "civil-registrations": {
+      "label": "Civil Registrations",
+      "subServices": {
+        "registration-of-past-births": {
+          "label": "Registration of Past Births",
+          "documents": [
+            "Pension Award Letter / Pension File",
+            "National Identity Card (NIC)",
+            "Marriage certificate of parents (if applicable)",
+            "Affidavit confirming birth details (if record missing)",
+            "Two witnesses' statements confirming birth details"
+          ]
+        },
+        "providing-report-on-death-persons": {
+          "label": "Providing Report on Death Persons",
+          "documents": [
+            "Medical certificate of cause of death",
+            "National Identity Card of the deceased",
+            "Informant's NIC",
+            "If death occurred outside hospital – police report may be required"
+          ]
+        },
+        "issuing-of-character-resident-certificate": {
+          "label": "Issuing of Character/Resident Certificate",
+          "documents": [
+            "Identity Card",
+            "Proof of residence (utility bills, property documents, or witnesses)",
+            "Grama Niladhari's verification of residence",
+            "Affidavit confirming birth details (if record missing)",
+            "Two witnesses' statements confirming birth details"
+          ]
+        },
+        "certifying-identity-card-applications": {
+          "label": "Certifying Identity Card Applications",
+          "documents": [
+            "Completed NIC application form",
+            "Birth certificate",
+            "Proof of residence",
+            "Photograph (as per Department of Registration of Persons guidelines)"
+          ]
+        }
+      }
+    },
+    "payment-of-pensions": {
+      "label": "Payment of Pensions",
+      "subServices": {
+        "for-new-pensioners": {
+          "label": "For New Pensioners",
+          "documents": [
+            "Pension Award Letter / Pension File",
+            "National Identity Card (NIC)",
+            "Bank Account Details",
+            "Grama Niladhari Certificate / Residency Confirmation",
+            "Birth Certificate",
+            "Retirement Letter / Last Salary Slip",
+            "Photographs (passport-size — for identity confirmation)",
+            "Duly completed Pension Application Form (Form P1 or equivalent)"
+          ]
+        },
+        "for-ongoing-pension-payments": {
+          "label": "For Ongoing Pension Payments",
+          "documents": [
+            "Life Certificate (certified annually, usually by Grama Niladhari or Divisional Secretary)",
+            "National Identity Card",
+            "Bank Passbook / Account Details"
+          ]
+        },
+        "for-change-of-address-or-bank": {
+          "label": "For Change of Address or Bank",
+          "documents": [
+            "Request Letter by Pensioner",
+            "New Bank Account Details (Certified by Bank)",
+            "NIC Copy",
+            "Grama Niladhari Certificate (New Residence Confirmation)",
+            "Original Pension Card / Book (if applicable)"
+          ]
+        },
+        "for-restoration-or-resumption-of-pension": {
+          "label": "For Restoration or Resumption of Pension",
+          "documents": [
+            "Explanation Letter (reason for non-collection or delay)",
+            "Life Certificate",
+            "NIC Copy",
+            "Bank Account Verification Letter",
+            "Approval from Department of Pensions (if required)"
+          ]
+        },
+        "for-nominee-heirs": {
+          "label": "For Nominee / Heirs (After Death of Pensioner)",
+          "documents": [
+            "Death Certificate of Pensioner",
+            "Marriage Certificate (for spouse)",
+            "Birth Certificates of Dependents (if children are eligible)",
+            "NICs of Claimants",
+            "Affidavit confirming relationship",
+            "Recommendation by Grama Niladhari and Divisional Secretary",
+            "Pension File Number"
+          ]
+        }
+      }
+    },
+    "samurdhi-program": {
+      "label": "Samurdhi Program",
+      "subServices": {}
+    },
+    "issuance-of-permit": {
+      "label": "Issuance of Permit",
+      "subServices": {}
+    },
+    "land-administration": {
+      "label": "Land Administration",
+      "subServices": {}
+    },
+    "procurements": {
+      "label": "Procurements",
+      "subServices": {}
+    },
+    "issuing-of-certificate": {
+      "label": "Issuing of Certificate",
+      "subServices": {}
+    },
+    "social-welfare": {
+      "label": "Social Welfare",
+      "subServices": {}
+    },
+    "fill-progress-form": {
+      "label": "Fill Progress Form",
+      "subServices": {}
+    }
   }
 }
