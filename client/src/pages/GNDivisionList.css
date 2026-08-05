@@ -12,6 +12,26 @@
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  .gn-search-row {
+    max-width: 100%;
+  }
+
+  .gn-filter-form {
+    max-width: 100%;
+  }
+
+  .gn-filter-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .gn-search-submit {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 .gn-search-icon { color: var(--ink-soft); flex-shrink: 0; }
 
 .gn-search-input {

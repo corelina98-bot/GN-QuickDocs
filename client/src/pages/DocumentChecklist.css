@@ -12,6 +12,21 @@
   margin-bottom: 22px;
 }
 
+@media (max-width: 768px) {
+  .gn-checklist-heading {
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+
+  .gn-checklist-item {
+    padding: 10px 12px;
+  }
+
+  .gn-check-text {
+    font-size: 13px;
+  }
+}
+
 .gn-checklist-icon {
   width: 34px;
   height: 34px;

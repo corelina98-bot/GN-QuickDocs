@@ -91,6 +91,44 @@
   transition: transform 0.35s ease, text-shadow 0.35s ease, color 0.35s ease;
 }
 
+@media (max-width: 768px) {
+  .gn-welcome-logo-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gn-welcome-title {
+    font-size: 42px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gn-welcome-content {
+    gap: 18px;
+    padding: 20px 18px;
+  }
+
+  .gn-welcome-logo-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gn-welcome-logo-text {
+    font-size: 32px;
+  }
+
+  .gn-welcome-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+
+  .gn-welcome-hint {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+}
+
 .gn-welcome-title:hover,
 .gn-welcome:focus-visible .gn-welcome-title {
   transform: scale(1.05);

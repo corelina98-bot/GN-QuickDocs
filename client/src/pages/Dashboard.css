@@ -16,6 +16,50 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .gn-dashboard-body {
+    gap: 32px;
+    padding-top: 22px;
+  }
+
+  .gn-dashboard-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+  }
+
+  .gn-ai-prompt {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gn-dashboard-tiles {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gn-ai-bar {
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    border-radius: 18px;
+  }
+
+  .gn-ai-bar input {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .gn-ai-icon-btn {
+    order: 1;
+  }
+
+  .gn-ai-send {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
 .gn-ai-block {
   display: flex;
   flex-direction: column;

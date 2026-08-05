@@ -7,6 +7,22 @@
   max-width: 520px;
 }
 
+@media (max-width: 768px) {
+  .gn-details-form {
+    max-width: 100%;
+  }
+
+  .gn-details-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .gn-location-btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
 .gn-details-row {
   display: grid;
   grid-template-columns: 120px 12px 1fr;

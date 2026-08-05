@@ -101,7 +101,10 @@
 
 * { box-sizing: border-box; }
 
-html { background: var(--page-bg-solid); }
+html {
+  background: var(--page-bg-solid);
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -112,6 +115,7 @@ body {
   min-height: 100vh;
   position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 /* Faint circuit-board texture behind every screen, like the mockups */
@@ -156,6 +160,7 @@ select:focus-visible {
 .gn-page {
   position: relative;
   z-index: 1;
+  width: min(960px, calc(100% - 20px));
   max-width: 960px;
   margin: 32px auto;
   border: 1px solid var(--card-border);
@@ -168,4 +173,27 @@ select:focus-visible {
 
 .gn-page-body {
   padding: 28px 32px 40px;
+}
+
+@media (max-width: 768px) {
+  .gn-page {
+    width: min(960px, calc(100% - 12px));
+    margin: 18px auto;
+    border-radius: var(--radius-md);
+  }
+
+  .gn-page-body {
+    padding: 20px 16px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gn-page {
+    width: calc(100% - 10px);
+    margin: 10px auto;
+  }
+
+  .gn-page-body {
+    padding: 18px 14px 22px;
+  }
 }
