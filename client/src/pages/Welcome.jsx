@@ -17,11 +17,11 @@ function Welcome() {
         <span className="gn-drift gn-drift-4" />
       </div>
 
-      <div className="gn-welcome-content">
+<div className="gn-welcome-content">
         <div className="gn-welcome-logo">
           <div className="gn-welcome-logo-circle">
             <span className="gn-welcome-logo-text">GN</span>
-            <span className="gn-welcome-logo-sub">QUICKCHECK</span>
+            <span className="gn-welcome-logo-sub">QUICKDOCS</span>
           </div>
         </div>
         <h1 className="gn-welcome-title font-display">WELCOME</h1>

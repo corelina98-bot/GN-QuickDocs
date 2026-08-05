@@ -19,7 +19,7 @@
 .gn-details-label { font-weight: 500; }
 
 .gn-details-row input {
-  background: var(--teal-50);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
   padding: 9px 12px;
@@ -33,11 +33,14 @@
   align-items: center;
   gap: 8px;
   margin-top: 8px;
-  background: var(--teal-200);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-pill);
   padding: 9px 18px;
   font-size: 14px;
   color: var(--ink);
 }
-.gn-location-btn:hover { background: var(--teal-300); }
+.gn-location-btn:hover {
+  background: var(--card-bg-hover);
+  box-shadow: var(--glow-border);
+}

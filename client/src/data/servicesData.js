@@ -97,12 +97,26 @@ const servicesData = {
       "for-restoration-or-resumption-of-pension": {
         label: "For Restoration or Resumption of Pension",
         icon: "RefreshCcw",
-        documents: [],
+        documents: [
+          "Explanation Letter (reason for non-collection or delay)",
+          "Life Certificate",
+          "NIC Copy",
+          "Bank Account Verification Letter",
+          "Approval from Department of Pensions (if required)",
+        ],
       },
       "for-nominee-heirs": {
         label: "For Nominee / Heirs (After Death of Pensioner)",
         icon: "HeartHandshake",
-        documents: [],
+        documents: [
+          "Death Certificate of Pensioner",
+          "Marriage Certificate (for spouse)",
+          "Birth Certificates of Dependents (if children are eligible)",
+          "NICs of Claimants",
+          "Affidavit confirming relationship",
+          "Recommendation by Grama Niladhari and Divisional Secretary",
+          "Pension File Number",
+        ],
       },
     },
   },

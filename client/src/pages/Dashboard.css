@@ -4,46 +4,48 @@
   display: flex;
   flex-direction: column;
   gap: 56px;
+  padding-top: 36px;
 }
 
 .gn-dashboard-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 560px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .gn-ai-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 18px;
   text-align: center;
 }
 
 .gn-ai-prompt {
   font-style: italic;
-  font-size: 18px;
+  font-size: 22px;
   color: var(--ink);
-  margin: 0 0 12px;
-}
-
-.gn-ai-label {
-  align-self: flex-start;
-  font-size: 12px;
-  color: var(--ink-soft);
-  margin-left: 4px;
+  margin: 0;
 }
 
 .gn-ai-bar {
   width: 100%;
+  max-width: 560px;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--teal-50);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-pill);
-  padding: 10px 16px;
+  padding: 8px 10px 8px 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.gn-ai-bar:focus-within {
+  box-shadow: var(--shadow-md), var(--glow-border);
 }
 
 .gn-ai-bar input {
@@ -59,19 +61,23 @@
 .gn-ai-bar input::placeholder { color: var(--ink-faint); }
 
 .gn-ai-icon-btn {
-  background: none;
-  border: none;
-  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  color: var(--ink-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease;
 }
-.gn-ai-icon-btn:hover { background: var(--teal-200); }
+.gn-ai-icon-btn:hover { background: var(--card-bg-hover); }
 
 .gn-ai-send {
   background: var(--ink);
   color: var(--white);
+  border-color: var(--ink);
 }
-.gn-ai-send:hover { background: var(--teal-700); }
+.gn-ai-send:hover { background: var(--teal-700); border-color: var(--teal-700); }

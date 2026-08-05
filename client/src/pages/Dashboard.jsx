@@ -27,18 +27,30 @@ function Dashboard() {
 
   return (
     <div className="gn-page">
-      <Header title={t("dashboard.title")} crumbs={[{ label: t("dashboard.title") }]} />
+      <Header title={t("dashboard.title")} variant="hero" />
 
       <div className="gn-page-body gn-dashboard-body">
         <div className="gn-dashboard-tiles">
-          <ServiceCard icon={UserRound} label={t("dashboard.gramaNiladhari")} to="/grama-niladhari" />
-          <ServiceCard icon={HeartHandshake} label={t("dashboard.services")} to="/services" />
+          <ServiceCard
+            size="lg"
+            icon={UserRound}
+            label={t("dashboard.gramaNiladhari")}
+            to="/grama-niladhari"
+          />
+          <ServiceCard
+            size="lg"
+            icon={HeartHandshake}
+            label={t("dashboard.services")}
+            to="/services"
+          />
         </div>
 
         <div className="gn-ai-block">
           <p className="gn-ai-prompt font-display">{t("dashboard.whatDoYouWantToKnow")}</p>
-          <span className="gn-ai-label">{t("dashboard.aiAssistant")}</span>
           <form className="gn-ai-bar" onSubmit={handleAsk}>
+            <button type="button" className="gn-ai-icon-btn" onClick={handleVoice} aria-label="Ask by voice">
+              <Mic size={18} />
+            </button>
             <input
               type="text"
               value={query}
@@ -46,9 +58,6 @@ function Dashboard() {
               placeholder={t("dashboard.askAnything")}
               aria-label={t("dashboard.askAnything")}
             />
-            <button type="button" className="gn-ai-icon-btn" onClick={handleVoice} aria-label="Ask by voice">
-              <Mic size={18} />
-            </button>
             <button type="submit" className="gn-ai-icon-btn gn-ai-send" aria-label="Send question">
               <ArrowUp size={18} />
             </button>

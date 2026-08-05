@@ -1,0 +1,66 @@
+/* client/src/components/ThemeToggle.css */
+
+.gn-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--toggle-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px 6px 10px;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.gn-theme-toggle:hover {
+  background: var(--card-bg-hover);
+}
+
+.gn-theme-toggle--compact {
+  padding: 5px 8px;
+  gap: 6px;
+}
+
+.gn-theme-icon-moon {
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.gn-theme-track {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(180deg, var(--teal-200), var(--teal-400));
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.gn-theme-track.is-dark {
+  background: linear-gradient(180deg, #0f3a42, #1c5e69);
+}
+
+.gn-theme-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gn-theme-track.is-dark .gn-theme-thumb {
+  transform: translateX(16px);
+  background: var(--teal-300);
+  box-shadow: 0 0 8px rgba(127, 211, 216, 0.85);
+}
+
+.gn-theme-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}

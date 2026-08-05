@@ -12,6 +12,10 @@
   background: var(--header-gradient);
 }
 
+.gn-header-wrap--hero .gn-header-bar {
+  padding: 20px 32px 12px;
+}
+
 .gn-logo { display: inline-flex; }
 
 .gn-logo-circle {
@@ -19,12 +23,24 @@
   height: 46px;
   border-radius: 50%;
   background: var(--white);
+  border: 1px solid var(--card-border);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.gn-logo-circle--hero {
+  width: 88px;
+  height: 88px;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: var(--shadow-md), var(--glow-border);
+}
+
+.gn-logo:hover .gn-logo-circle { transform: scale(1.05); }
 
 .gn-logo-text {
   font-family: var(--font-display);
@@ -32,6 +48,15 @@
   font-size: 15px;
   color: var(--teal-700);
   letter-spacing: 0.5px;
+}
+
+.gn-logo-circle--hero .gn-logo-text { font-size: 28px; }
+
+.gn-logo-sub {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+  color: var(--teal-600);
+  font-weight: 700;
 }
 
 .gn-header-title {
@@ -43,6 +68,20 @@
   color: var(--ink);
 }
 
+.gn-header-title--hero {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.gn-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .gn-menu-btn {
   background: none;
   border: none;
@@ -52,7 +91,13 @@
   padding: 6px;
   border-radius: var(--radius-sm);
 }
-.gn-menu-btn:hover { background: rgba(255,255,255,0.4); }
+.gn-menu-btn:hover { background: var(--header-hover-overlay); }
+
+.gn-header-theme-row {
+  display: flex;
+  padding: 4px 32px 14px;
+  background: var(--header-gradient);
+}
 
 .gn-subbar {
   display: flex;
@@ -74,7 +119,7 @@
   color: var(--ink);
   flex-shrink: 0;
 }
-.gn-back-btn:hover { background: var(--teal-50); }
+.gn-back-btn:hover { background: var(--card-bg); }
 
 .gn-breadcrumb {
   flex: 1;
@@ -92,7 +137,7 @@
 }
 
 .gn-lang-btn {
-  border: none;
+  border: 1px solid transparent;
   background: var(--teal-300);
   color: var(--ink);
   font-family: var(--font-display);
@@ -100,7 +145,7 @@
   font-size: 13px;
   padding: 3px 9px;
   border-radius: var(--radius-sm);
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .gn-lang-btn:hover { background: var(--teal-400); }
@@ -108,4 +153,5 @@
 .gn-lang-btn.active {
   background: var(--teal-600);
   color: var(--white);
+  box-shadow: var(--glow-border);
 }

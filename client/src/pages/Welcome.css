@@ -86,7 +86,7 @@
 .gn-welcome-title {
   font-size: 56px;
   letter-spacing: 6px;
-  color: var(--ink);
+  color: #16262b;
   margin: 0;
   transition: transform 0.35s ease, text-shadow 0.35s ease, color 0.35s ease;
 }
@@ -94,7 +94,7 @@
 .gn-welcome-title:hover,
 .gn-welcome:focus-visible .gn-welcome-title {
   transform: scale(1.05);
-  color: var(--white);
+  color: #ffffff;
   text-shadow: 0 0 24px rgba(255,255,255,0.85);
 }
 

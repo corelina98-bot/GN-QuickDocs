@@ -14,9 +14,9 @@
     "title": "Dashboard",
     "gramaNiladhari": "Grama Niladhari",
     "services": "Services",
-    "whatDoYouWantToKnow": "What do you want to know?",
-    "aiAssistant": "AI Assisstant",
-    "askAnything": "Ask anything here"
+    "whatDoYouWantToKnow": "How can I help you?",
+    "aiAssistant": "AI Assistant",
+    "askAnything": "Type or speak your question..."
   },
 
   "aiAssistant": {

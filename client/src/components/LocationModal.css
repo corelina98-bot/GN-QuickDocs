@@ -3,7 +3,7 @@
 .gn-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(22, 38, 43, 0.45);
+  background: rgba(4, 12, 14, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,11 +12,12 @@
 
 .gn-location-modal {
   background: var(--white);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   padding: 18px;
   max-width: 480px;
   width: 92%;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), var(--glow-border);
 }
 
 .gn-location-modal-header {
@@ -25,6 +26,7 @@
   justify-content: space-between;
   margin-bottom: 12px;
   font-size: 17px;
+  color: var(--ink);
 }
 
 .gn-modal-x {
@@ -35,4 +37,4 @@
   padding: 4px;
   border-radius: 50%;
 }
-.gn-modal-x:hover { background: var(--teal-100); }
+.gn-modal-x:hover { background: var(--card-bg); }

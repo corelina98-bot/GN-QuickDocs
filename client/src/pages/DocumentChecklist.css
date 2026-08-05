@@ -39,11 +39,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--teal-50);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
   padding: 10px 14px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
+.gn-checklist-item:hover { background: var(--card-bg-hover); }
 
 .gn-check-icon { color: var(--teal-700); flex-shrink: 0; }
 
@@ -61,12 +63,12 @@
   color: var(--teal-700);
   flex-shrink: 0;
 }
-.gn-sample-btn:hover { background: var(--teal-200); }
+.gn-sample-btn:hover { background: var(--card-bg-hover); }
 
 .gn-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(22, 38, 43, 0.45);
+  background: rgba(4, 12, 14, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,11 +77,12 @@
 
 .gn-modal {
   background: var(--white);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   padding: 24px 28px;
   max-width: 420px;
   width: 90%;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), var(--glow-border);
 }
 
 .gn-modal-close {

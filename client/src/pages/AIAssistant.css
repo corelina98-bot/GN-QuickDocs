@@ -13,7 +13,7 @@
 }
 
 .gn-ai-answer {
-  background: var(--teal-50);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   padding: 20px 24px;
@@ -22,7 +22,8 @@
   font-size: 15px;
   line-height: 1.7;
   white-space: pre-wrap;
+  color: var(--ink);
 }
 
 .gn-ai-loading { color: var(--ink-soft); }
-.gn-ai-error { color: #b3423f; font-style: normal; }
+.gn-ai-error { color: #e07a76; font-style: normal; }
