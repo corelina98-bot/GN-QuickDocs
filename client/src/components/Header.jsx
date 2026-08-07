@@ -1,7 +1,7 @@
 // client/src/components/Header.jsx
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import "./Header.css";
 
@@ -56,21 +56,20 @@ return (
               </button>
             ))}
           </div>
-
-          {!isHero && (
-            <button
-              className="gn-menu-btn"
-              aria-label="Open menu"
-              onClick={() => { /* wire up a drawer/menu here later */ }}
-            >
-              <Menu size={22} />
-            </button>
-          )}
         </div>
       </div>
 
       {isHero ? (
         <div className="gn-header-theme-row">
+          {showBack && (
+            <button
+              className="gn-back-btn"
+              onClick={onBack ?? (() => window.history.back())}
+              aria-label="Go back"
+            >
+              <ArrowLeft size={18} />
+            </button>
+          )}
           <ThemeToggle />
         </div>
       ) : (

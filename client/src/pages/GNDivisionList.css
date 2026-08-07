@@ -63,6 +63,15 @@
   color: var(--ink);
 }
 
+/* Style the dropdown option list so it uses the theme colors.
+   Without this, the native <option> panel keeps a white background/
+   white text in dark mode, making the choices invisible until selected. */
+.gn-filter-row select option,
+.gn-filter-row select optgroup {
+  background: var(--white);
+  color: var(--ink);
+}
+
 .gn-search-submit {
   align-self: center;
   margin-top: 12px;

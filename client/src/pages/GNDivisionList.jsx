@@ -32,6 +32,7 @@ function GNDivisionList() {
       <Header
         title={t("gnList.title")}
         crumbs={[{ label: t("dashboard.title"), to: "/dashboard" }, { label: t("gnList.title") }]}
+        showBack
       />
 
       <div className="gn-page-body gn-gnlist-body">

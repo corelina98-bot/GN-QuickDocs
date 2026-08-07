@@ -6,14 +6,22 @@
    - 4 items -> 2x2 (gn-grid-2)
    - 2 items -> one line of 2 (gn-grid-2)
    - 1 item  -> single centered card (gn-grid-1) */
+/* Vertically + horizontally center any page body that holds a grid,
+   so services and sub-services sit in the middle rather than the top. */
+.gn-page-body:has(.gn-grid) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .gn-grid {
   display: grid;
   justify-content: center;
   align-content: center;
   gap: 18px;
   max-width: 720px;
-  margin: auto;
-  min-height: 100%;
+  width: 100%;
 }
 
 .gn-grid-3 {

@@ -82,19 +82,11 @@
   flex-shrink: 0;
 }
 
-.gn-menu-btn {
-  background: none;
-  border: none;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  padding: 6px;
-  border-radius: var(--radius-sm);
-}
-.gn-menu-btn:hover { background: var(--header-hover-overlay); }
-
 .gn-header-theme-row {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
   padding: 4px 32px 14px;
   background: var(--header-gradient);
 }

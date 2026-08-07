@@ -40,6 +40,7 @@ function CategoryDetail() {
               return (
                 <ServiceCard
                   key={slug}
+                  size="lg"
                   icon={Icon}
                   label={sub.label}
                   to={`/services/${categorySlug}/${slug}`}

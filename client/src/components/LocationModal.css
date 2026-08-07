@@ -15,8 +15,8 @@
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   padding: 18px;
-  max-width: 480px;
-  width: 92%;
+  width: auto;
+  max-width: 96vw;
   box-shadow: var(--shadow-md), var(--glow-border);
 }
 
@@ -24,9 +24,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   margin-bottom: 12px;
   font-size: 17px;
   color: var(--ink);
+}
+
+/* Map size control buttons (+ enlarge, - shrink, restore) */
+.gn-map-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gn-map-ctrl-btn {
+  background: none;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+.gn-map-ctrl-btn:hover {
+  background: var(--card-bg);
+  color: var(--ink);
+  box-shadow: var(--glow-border);
+}
+
+/* Wrapper that lets the map grow/shrink with the size controls */
+.gn-location-map-frame {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gn-location-map-frame iframe {
+  display: block;
 }
 
 .gn-modal-x {

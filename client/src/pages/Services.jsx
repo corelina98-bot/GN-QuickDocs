@@ -17,6 +17,7 @@ function Services() {
       <Header
         title={t("services.title")}
         crumbs={[{ label: t("dashboard.title"), to: "/dashboard" }, { label: t("services.title") }]}
+        showBack
       />
 
       <div className="gn-page-body">
