@@ -185,3 +185,31 @@ select:focus-visible {
   flex: 1;
 }
 
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-page {
+    margin: 12px auto;
+    min-height: 0;
+    border-radius: var(--radius-md);
+  }
+
+  /* Keep the taller hero pages at a comfortable min-height on mobile too */
+  .gn-page:has(.gn-header-wrap--hero) {
+    min-height: 0;
+  }
+
+  .gn-page-body {
+    padding: 20px 16px 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gn-page {
+    margin: 8px auto;
+  }
+
+  .gn-page-body {
+    padding: 16px 12px 24px;
+  }
+}
+

@@ -43,6 +43,17 @@
   .gn-grid-3, .gn-grid-2 {
     grid-template-columns: 1fr;
   }
+
+  .gn-grid {
+    gap: 14px;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gn-grid {
+    gap: 12px;
+  }
 }
 
 .gn-empty-note {

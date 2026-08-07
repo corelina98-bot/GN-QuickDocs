@@ -88,3 +88,28 @@
   background: var(--teal-400);
   box-shadow: var(--shadow-md), var(--glow-border);
 }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-search-row {
+    margin-bottom: 20px;
+    padding: 9px 14px;
+  }
+
+  .gn-browse-heading {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .gn-filter-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .gn-search-submit {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 0;
+  }
+}

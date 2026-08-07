@@ -68,3 +68,41 @@
 .gn-service-card--xl .gn-service-label {
   font-size: 19px;
 }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-service-card {
+    padding: 16px 14px;
+    gap: 10px;
+  }
+
+  .gn-service-card--lg {
+    padding: 24px 16px;
+    min-height: 130px;
+  }
+
+  .gn-service-card--xl {
+    padding: 28px 18px;
+    min-height: 140px;
+  }
+
+  .gn-service-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .gn-service-card--lg .gn-service-icon,
+  .gn-service-card--xl .gn-service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gn-service-label {
+    font-size: 14px;
+  }
+
+  .gn-service-card--lg .gn-service-label,
+  .gn-service-card--xl .gn-service-label {
+    font-size: 17px;
+  }
+}

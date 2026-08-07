@@ -81,3 +81,27 @@
   border-color: var(--ink);
 }
 .gn-ai-send:hover { background: var(--teal-700); border-color: var(--teal-700); }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-dashboard-body {
+    gap: 36px;
+    padding-top: 24px;
+  }
+
+  .gn-dashboard-tiles {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 16px;
+  }
+
+  .gn-ai-prompt {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gn-ai-prompt {
+    font-size: 16px;
+  }
+}

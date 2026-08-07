@@ -53,3 +53,21 @@
   background: var(--card-bg-hover);
   box-shadow: var(--glow-border);
 }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-details-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .gn-details-row .gn-details-label {
+    font-weight: 600;
+  }
+
+  .gn-location-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}

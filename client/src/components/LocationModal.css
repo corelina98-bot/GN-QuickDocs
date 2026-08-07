@@ -75,3 +75,21 @@
   border-radius: 50%;
 }
 .gn-modal-x:hover { background: var(--card-bg); }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-location-modal {
+    width: 96vw;
+    max-width: 100vw;
+    padding: 14px;
+  }
+
+  .gn-location-modal-header {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .gn-location-map-frame {
+    width: 100% !important;
+  }
+}

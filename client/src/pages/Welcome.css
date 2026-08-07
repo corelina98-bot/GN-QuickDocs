@@ -107,3 +107,44 @@
 @media (prefers-reduced-motion: reduce) {
   .gn-drift { animation: none; }
 }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-welcome-content {
+    gap: 20px;
+  }
+
+  .gn-welcome-logo-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gn-welcome-logo-text {
+    font-size: 30px;
+  }
+
+  .gn-welcome-logo-sub {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .gn-welcome-title {
+    font-size: 34px;
+    letter-spacing: 3px;
+  }
+
+  .gn-welcome-hint {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gn-welcome-logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gn-welcome-title {
+    font-size: 28px;
+  }
+}

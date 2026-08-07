@@ -27,3 +27,16 @@
 
 .gn-ai-loading { color: var(--ink-soft); }
 .gn-ai-error { color: #e07a76; font-style: normal; }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-ai-problem {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .gn-ai-answer {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+}

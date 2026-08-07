@@ -95,3 +95,26 @@
   font-size: 14px;
 }
 .gn-modal-close:hover { background: var(--teal-700); }
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .gn-checklist-heading {
+    padding: 10px 14px;
+  }
+
+  .gn-check-text {
+    font-size: 13.5px;
+  }
+
+  .gn-modal {
+    width: 92%;
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gn-checklist-item {
+    padding: 9px 11px;
+    gap: 8px;
+  }
+}

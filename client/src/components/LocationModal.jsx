@@ -12,7 +12,9 @@ import "./LocationModal.css";
  * The popup also exposes map size controls (+ enlarge, - shrink, restore)
  * so users can increase or reduce the map size from its default.
  */
-const DEFAULT_SIZE = { width: 420, height: 320 };
+// Clamp the default map width so it never exceeds the viewport on mobile.
+const DEFAULT_WIDTH = Math.min(420, (typeof window !== "undefined" ? window.innerWidth : 420) - 48);
+const DEFAULT_HEIGHT = 320;
 const MIN_WIDTH = 260;
 const MAX_WIDTH = 960;
 const STEP = 60;
@@ -21,7 +23,7 @@ function LocationModal({ lat, lng, onClose }) {
   const { t } = useTranslation();
   const mapSrc = `https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
 
-  const [size, setSize] = useState(DEFAULT_SIZE);
+  const [size, setSize] = useState({ width: DEFAULT_WIDTH, height: DEFAULT_HEIGHT });
 
   const enlarge = () =>
     setSize((s) => ({ width: Math.min(s.width + STEP, MAX_WIDTH), height: s.height + STEP * 0.75 }));
@@ -29,7 +31,7 @@ function LocationModal({ lat, lng, onClose }) {
   const shrink = () =>
     setSize((s) => ({ width: Math.max(s.width - STEP, MIN_WIDTH), height: Math.max(s.height - STEP * 0.75, 160) }));
 
-  const restore = () => setSize(DEFAULT_SIZE);
+  const restore = () => setSize({ width: DEFAULT_WIDTH, height: DEFAULT_HEIGHT });
 
   return (
     <div className="gn-modal-backdrop" onClick={onClose}>
