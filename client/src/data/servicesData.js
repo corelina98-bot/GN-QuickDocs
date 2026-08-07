@@ -11,116 +11,127 @@
 // translates every service screen.
 
 const servicesData = {
-  "civil-registrations": {
-    icon: "UserRound",
+  "identity-verification-certificates": {
+    icon: "FileBadge",
     subServices: {
-      "registration-of-past-births": {
-        icon: "Baby",
+      "residence-certificate": {
+        icon: "Home",
         documentKeys: [
-          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.0",
-          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.1",
-          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.2",
-          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.3",
-          "serviceContent.civil-registrations.subServices.registration-of-past-births.documents.4",
+          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.0",
+          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.1",
+          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.2",
+          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.3",
+          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.4",
         ],
       },
-      "providing-report-on-death-persons": {
-        icon: "Ribbon",
+      "character-certificate": {
+        icon: "ShieldCheck",
         documentKeys: [
-          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.0",
-          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.1",
-          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.2",
-          "serviceContent.civil-registrations.subServices.providing-report-on-death-persons.documents.3",
+          "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.0",
+          "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.1",
+          "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.2",
+          "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.3",
         ],
       },
-      "issuing-of-character-resident-certificate": {
-        icon: "FileBadge",
+      "income-certificate": {
+        icon: "Wallet",
         documentKeys: [
-          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.0",
-          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.1",
-          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.2",
-          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.3",
-          "serviceContent.civil-registrations.subServices.issuing-of-character-resident-certificate.documents.4",
+          "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.0",
+          "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.1",
+          "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.2",
+          "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.3",
         ],
       },
-      "certifying-identity-card-applications": {
-        icon: "IdCard",
+      "life-certificate": {
+        icon: "HeartPulse",
         documentKeys: [
-          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.0",
-          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.1",
-          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.2",
-          "serviceContent.civil-registrations.subServices.certifying-identity-card-applications.documents.3",
+          "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.0",
+          "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.1",
+          "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.2",
+          "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.3",
         ],
       },
     },
   },
 
-  "payment-of-pensions": {
+  "electoral-civil-registrations": {
+    icon: "ScrollText",
+    subServices: {
+      "voter-registration-electoral-roll": {
+        icon: "Vote",
+        documentKeys: [
+          "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.0",
+          "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.1",
+          "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.2",
+          "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.3",
+        ],
+      },
+      "verification-birth-death-marriage": {
+        icon: "FileCheck",
+        documentKeys: [
+          "serviceContent.electoral-civil-registrations.subServices.verification-birth-death-marriage.documents.0",
+          "serviceContent.electoral-civil-registrations.subServices.verification-birth-death-marriage.documents.1",
+          "serviceContent.electoral-civil-registrations.subServices.verification-birth-death-marriage.documents.2",
+        ],
+      },
+    },
+  },
+
+  "land-permits-local-industry": {
+    icon: "MapPin",
+    subServices: {
+      "tree-felling-timber-transport": {
+        icon: "TreePine",
+        documentKeys: [
+          "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.0",
+          "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.1",
+          "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.2",
+          "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.3",
+        ],
+      },
+      "animal-cattle-transport": {
+        icon: "PawPrint",
+        documentKeys: [
+          "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.0",
+          "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.1",
+          "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.2",
+        ],
+      },
+      "event-public-loudspeaker": {
+        icon: "Megaphone",
+        documentKeys: [
+          "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.0",
+          "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.1",
+          "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.2",
+          "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.3",
+        ],
+      },
+    },
+  },
+
+  "welfare-social-relief": {
     icon: "HandCoins",
     subServices: {
-      "for-new-pensioners": {
-        icon: "Accessibility",
-        documentKeys: [
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.0",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.1",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.2",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.3",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.4",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.5",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.6",
-          "serviceContent.payment-of-pensions.subServices.for-new-pensioners.documents.7",
-        ],
-      },
-      "for-ongoing-pension-payments": {
-        icon: "Users",
-        documentKeys: [
-          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.0",
-          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.1",
-          "serviceContent.payment-of-pensions.subServices.for-ongoing-pension-payments.documents.2",
-        ],
-      },
-      "for-change-of-address-or-bank": {
-        icon: "Landmark",
-        documentKeys: [
-          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.0",
-          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.1",
-          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.2",
-          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.3",
-          "serviceContent.payment-of-pensions.subServices.for-change-of-address-or-bank.documents.4",
-        ],
-      },
-      "for-restoration-or-resumption-of-pension": {
-        icon: "RefreshCcw",
-        documentKeys: [
-          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.0",
-          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.1",
-          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.2",
-          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.3",
-          "serviceContent.payment-of-pensions.subServices.for-restoration-or-resumption-of-pension.documents.4",
-        ],
-      },
-      "for-nominee-heirs": {
+      "social-welfare-application": {
         icon: "HeartHandshake",
         documentKeys: [
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.0",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.1",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.2",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.3",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.4",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.5",
-          "serviceContent.payment-of-pensions.subServices.for-nominee-heirs.documents.6",
+          "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.0",
+          "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.1",
+          "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.2",
+          "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.3",
+        ],
+      },
+      "disaster-compensation-damage": {
+        icon: "Umbrella",
+        documentKeys: [
+          "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.0",
+          "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.1",
+          "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.2",
+          "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.3",
         ],
       },
     },
   },
-
-  "samurdhi-program": { icon: "Users", subServices: {} },
-  "issuance-of-permit": { icon: "ScrollText", subServices: {} },
-  "land-administration": { icon: "Landmark", subServices: {} },
-  "procurements": { icon: "Truck", subServices: {} },
-  "issuing-of-certificate": { icon: "FileBadge2", subServices: {} },
-  "social-welfare": { icon: "Globe2", subServices: {} },
-  "fill-progress-form": { icon: "ClipboardList", subServices: {} },
 };
 
 /**
