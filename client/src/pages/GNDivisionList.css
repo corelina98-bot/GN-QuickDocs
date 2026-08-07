@@ -1,5 +1,13 @@
 /* client/src/pages/GNDivisionList.css */
 
+.gn-gnlist-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
 .gn-search-row {
   display: flex;
   align-items: center;
@@ -10,6 +18,7 @@
   padding: 10px 16px;
   max-width: 420px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .gn-search-icon { color: var(--ink-soft); flex-shrink: 0; }

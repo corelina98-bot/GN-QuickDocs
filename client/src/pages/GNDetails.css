@@ -1,10 +1,19 @@
 /* client/src/pages/GNDetails.css */
 
+.gn-gndetails-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
 .gn-details-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
   max-width: 520px;
+  width: 100%;
 }
 
 .gn-details-row {
@@ -28,7 +37,7 @@
 }
 
 .gn-location-btn {
-  align-self: flex-start;
+  align-self: center;
   display: flex;
   align-items: center;
   gap: 8px;

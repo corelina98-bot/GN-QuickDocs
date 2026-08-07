@@ -13,13 +13,15 @@ import "./ServiceCard.css";
  * - label: string
  * - to: route to navigate to on click
  * - size: "md" (default, used in grids) | "lg" (used for the two big
- *         Dashboard hero tiles seen in IMG1/IMG2)
+ *         Dashboard hero tiles seen in IMG1/IMG2) | "xl" (used for the
+ *         larger category cards on the Services page)
  */
 function ServiceCard({ icon: Icon, label, to, size = "md" }) {
+  const iconSize = size === "lg" ? 36 : size === "xl" ? 40 : 24;
   return (
     <Link to={to} className={`gn-service-card gn-service-card--${size}`}>
       <span className="gn-service-icon">
-        <Icon size={size === "lg" ? 36 : 24} strokeWidth={1.5} />
+        <Icon size={iconSize} strokeWidth={1.5} />
       </span>
       <span className="gn-service-label font-display">{label}</span>
     </Link>

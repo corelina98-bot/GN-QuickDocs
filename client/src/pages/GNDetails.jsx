@@ -34,7 +34,7 @@ function GNDetails() {
         showBack
       />
 
-      <div className="gn-page-body">
+      <div className="gn-page-body gn-gndetails-body">
         <div className="gn-details-form">
           <div className="gn-details-row">
             <span className="gn-details-label">{t("gnDetails.name")}</span>

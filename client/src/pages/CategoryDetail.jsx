@@ -5,6 +5,7 @@ import * as Icons from "lucide-react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import { getLocalizedServices } from "../data/servicesData";
+import { gridClassFor } from "../utils/gridLayout";
 import "./Grid.css";
 
 function CategoryDetail() {
@@ -33,7 +34,7 @@ function CategoryDetail() {
         {subServices.length === 0 ? (
           <p className="gn-empty-note">{t("services.comingSoon")}</p>
         ) : (
-          <div className="gn-grid gn-grid-2">
+          <div className={`gn-grid ${gridClassFor(subServices.length)}`}>
             {subServices.map(([slug, sub]) => {
               const Icon = Icons[sub.icon] ?? Icons.CircleHelp;
               return (

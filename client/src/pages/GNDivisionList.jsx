@@ -34,7 +34,7 @@ function GNDivisionList() {
         crumbs={[{ label: t("dashboard.title"), to: "/dashboard" }, { label: t("gnList.title") }]}
       />
 
-      <div className="gn-page-body">
+      <div className="gn-page-body gn-gnlist-body">
         <div className="gn-search-row">
           <Search size={18} className="gn-search-icon" />
           <input
@@ -81,3 +81,4 @@ function GNDivisionList() {
 }
 
 export default GNDivisionList;
+

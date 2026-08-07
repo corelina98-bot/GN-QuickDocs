@@ -26,11 +26,11 @@
   --ink-soft: #4c6066;
   --ink-faint: #8aa0a4;
 
-  --card-bg: #e3f5f5;
-  --card-bg-hover: #d3eeee;
-  --card-border: #bfe4e5;
+  --card-bg: #dceef0;
+  --card-bg-hover: #cfe7ea;
+  --card-border: #b6dde0;
 
-  --white: #ffffff;
+  --white: #eef6f8;
   --link: #2f9aa6;
 
   --radius-sm: 8px;
@@ -49,9 +49,9 @@
   --header-hover-overlay: rgba(255, 255, 255, 0.45);
   --toggle-bg: var(--teal-50);
 
-  --page-bg-solid: #f3fbfb;
-  --page-bg: radial-gradient(circle at 12% 8%, rgba(127, 211, 216, 0.18), transparent 42%),
-             radial-gradient(circle at 88% 92%, rgba(127, 211, 216, 0.14), transparent 42%),
+  --page-bg-solid: #dfedf2;
+  --page-bg: radial-gradient(circle at 12% 8%, rgba(127, 211, 216, 0.20), transparent 42%),
+             radial-gradient(circle at 88% 92%, rgba(127, 211, 216, 0.16), transparent 42%),
              var(--page-bg-solid);
 
   --circuit-pattern: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><g fill='none' stroke='%23163238' stroke-width='1.2' opacity='0.12'><path d='M10 10H90V70H170V10'/><circle cx='90' cy='70' r='3' fill='%23163238'/><path d='M20 230V160H90V120'/><circle cx='90' cy='120' r='3' fill='%23163238'/><path d='M220 30V110H140V150'/><circle cx='140' cy='150' r='3' fill='%23163238'/><path d='M0 190H60'/><path d='M180 220H240'/></g></svg>");
@@ -152,11 +152,12 @@ select:focus-visible {
   }
 }
 
-/* Shared page shell used by every screen after the splash page */
+/* Shared page shell used by every screen after the splash page. */
 .gn-page {
   position: relative;
   z-index: 1;
   max-width: 960px;
+  width: 100%;
   margin: 32px auto;
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
@@ -164,8 +165,23 @@ select:focus-visible {
   box-shadow: var(--shadow-md), var(--glow-border);
   background: var(--white);
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Keep every page the same size: all pages fill a consistent height
+     regardless of how much content each one holds. Content larger than
+     this still expands/scrolls naturally. */
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Dashboard uses a taller "hero" header, so give it the same total
+   height as the default pages to keep every screen uniform. */
+.gn-page:has(.gn-header-wrap--hero) {
+  min-height: 640px;
 }
 
 .gn-page-body {
   padding: 28px 32px 40px;
+  flex: 1;
 }
+

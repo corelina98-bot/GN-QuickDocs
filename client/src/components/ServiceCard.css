@@ -30,6 +30,15 @@
   gap: 16px;
 }
 
+/* Extra-large variant used on the Services page so the category
+   cards stand out more. */
+.gn-service-card--xl {
+  padding: 40px 24px;
+  min-height: 190px;
+  border-radius: var(--radius-lg);
+  gap: 18px;
+}
+
 .gn-service-icon {
   width: 54px;
   height: 54px;
@@ -43,7 +52,8 @@
   box-shadow: var(--shadow-sm);
 }
 
-.gn-service-card--lg .gn-service-icon {
+.gn-service-card--lg .gn-service-icon,
+.gn-service-card--xl .gn-service-icon {
   width: 74px;
   height: 74px;
 }
@@ -54,6 +64,7 @@
   font-weight: 600;
 }
 
-.gn-service-card--lg .gn-service-label {
+.gn-service-card--lg .gn-service-label,
+.gn-service-card--xl .gn-service-label {
   font-size: 19px;
 }
