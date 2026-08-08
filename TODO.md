@@ -1,9 +1,13 @@
-# TODO: Fix AI Chat Continuation
+# TODO: Add Provinces & Districts to GN Division List (from MongoDB)
 
 ## Steps to Complete
 
-1. [x] Server: Update `aiController.js` to accept and send conversation `messages` (history) to Groq.
-2. [x] Client: Convert `AIAssistant.jsx` into a chat interface with message history, input bar, and follow-up support.
-3. [x] Client: Add chat styles to `AIAssistant.css` (message bubbles, scrollable area, sticky input bar).
-4. [x] Translations: Add `aiAssistant` chat keys to `en.json`, `si.json`, and `ta.json`.
-5. [x] Test: Verified the client build succeeds (`npm run build` passed with no errors).
+1. [x] Server: Create `models/Location.js` — province model with embedded `districts` array.
+2. [x] Server: Create `data/locationSeed.js` — all 9 provinces and their districts.
+3. [x] Server: Create `controllers/locationController.js` — `getLocations`.
+4. [x] Server: Create `routes/locationRoutes.js` — `GET /api/locations`.
+5. [x] Server: Register `locationRoutes` in `server.js`.
+6. [x] Server: Create `seed.js` script to insert provinces + districts into MongoDB.
+7. [x] Run seed script to populate MongoDB.
+8. [x] Client: Update `GNDivisionList.jsx` to fetch provinces from API and filter districts by selected province.
+9. [x] Test: Build the client and verify the flow.
