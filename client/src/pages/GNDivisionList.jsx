@@ -12,7 +12,6 @@ import "./GNDivisionList.css";
 // is filtered based on the currently selected province.
 function GNDivisionList() {
   const { t } = useTranslation();
-  const GN_DIVISIONS = t("gnList.divisions", { returnObjects: true });
   const navigate = useNavigate();
 
   const [locations, setLocations] = useState([]);
@@ -44,8 +43,18 @@ function GNDivisionList() {
     setDistrict("");
   };
 
+// Reset the GN division whenever the selected district changes.
+  const handleDistrictChange = (e) => {
+    setDistrict(e.target.value);
+    setGnDivision("");
+  };
+
   const selectedProvince = locations.find((loc) => loc.name === province);
   const districts = selectedProvince ? selectedProvince.districts : [];
+
+  // The selected district's nested GN divisions (districts are objects now).
+  const selectedDistrictData = districts.find((d) => d.name === district);
+  const divisions = selectedDistrictData ? selectedDistrictData.divisions : [];
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -91,12 +100,12 @@ function GNDivisionList() {
               </select>
             </label>
 
-            <label className="gn-filter-row">
+<label className="gn-filter-row">
               <span>{t("gnList.district")}</span>
-              <select value={district} onChange={(e) => setDistrict(e.target.value)}>
+              <select value={district} onChange={handleDistrictChange}>
                 <option value="">—</option>
                 {districts.map((d) => (
-                  <option key={d} value={d}>{d}</option>
+                  <option key={d.name} value={d.name}>{d.name}</option>
                 ))}
               </select>
             </label>
@@ -105,8 +114,8 @@ function GNDivisionList() {
               <span>{t("gnList.gnDivision")}</span>
               <select value={gnDivision} onChange={(e) => setGnDivision(e.target.value)}>
                 <option value="">—</option>
-                {GN_DIVISIONS.map((g) => (
-                  <option key={g} value={g}>{g}</option>
+                {divisions.map((g) => (
+                  <option key={g._id || g.code} value={g.name}>{g.name}</option>
                 ))}
               </select>
             </label>
