@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import documentRoutes from "./routes/documentRoutes.js";
 import aiRoutes from "./routes/aiRoutes.js";
+import instructionSheetRoutes from "./routes/instructionSheetRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -43,6 +44,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/documents", documentRoutes);
 app.use("/api/ai", aiRoutes);
+app.use("/api", instructionSheetRoutes);
 
 app.get("/", (req, res) => res.send("GN QuickDocs API running"));
 

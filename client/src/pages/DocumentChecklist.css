@@ -10,6 +10,157 @@
   padding: 12px 18px;
   max-width: 480px;
   margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Instruction Sheet button ---------- */
+.gn-instruction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px 6px 8px;
+  margin-left: auto;
+  color: var(--teal-700);
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.gn-instruction-btn:hover {
+  background: var(--card-bg-hover);
+  box-shadow: var(--shadow-sm), var(--glow-border);
+  transform: translateY(-1px);
+}
+
+.gn-instruction-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-700);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.gn-instruction-label { white-space: nowrap; }
+
+/* ---------- Instruction Sheet modal ---------- */
+.gn-instruction-modal {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md), var(--glow-border);
+  width: min(860px, 94vw);
+  max-width: 94vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.gn-instruction-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.gn-instruction-modal-title { font-size: 17px; }
+
+.gn-instruction-preview {
+  position: relative;
+  height: 62vh;
+  min-height: 320px;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gn-instruction-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.gn-instruction-frame--hidden {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gn-instruction-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+  padding: 24px;
+}
+.gn-instruction-state p { margin: 0; font-size: 14.5px; }
+
+.gn-instruction-spinner {
+  color: var(--teal-600);
+  animation: gn-spin 0.9s linear infinite;
+}
+@keyframes gn-spin { to { transform: rotate(360deg); } }
+
+.gn-instruction-error-icon { color: var(--teal-700); }
+
+.gn-instruction-retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  color: var(--teal-700);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+.gn-instruction-retry:hover { background: var(--card-bg-hover); }
+
+.gn-instruction-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--card-border);
+}
+
+.gn-instruction-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--teal-600);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.gn-instruction-download:hover { background: var(--teal-700); }
+
+.gn-instruction-dl-error {
+  color: var(--teal-700);
+  font-size: 13px;
+  margin-right: auto;
 }
 
 .gn-checklist-icon {
@@ -110,11 +261,38 @@
     width: 92%;
     padding: 20px 16px;
   }
+
+  .gn-instruction-modal {
+    width: 96vw;
+    max-width: 96vw;
+  }
+
+  .gn-instruction-preview {
+    height: 56vh;
+    min-height: 280px;
+  }
+
+  .gn-instruction-modal-header {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .gn-instruction-modal-title { font-size: 15px; }
+
+  .gn-instruction-actions {
+    padding: 12px 14px;
+  }
 }
 
 @media (max-width: 420px) {
   .gn-checklist-item {
     padding: 9px 11px;
     gap: 8px;
+  }
+
+  .gn-instruction-btn {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
   }
 }

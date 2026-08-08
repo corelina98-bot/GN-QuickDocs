@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { CheckSquare, Eye } from "lucide-react";
 import * as Icons from "lucide-react";
 import Header from "../components/Header";
+import InstructionSheetButton from "../components/InstructionSheetButton";
+import InstructionSheetModal from "../components/InstructionSheetModal";
 import { getLocalizedServices } from "../data/servicesData";
 import "./DocumentChecklist.css";
 
@@ -12,6 +14,7 @@ function DocumentChecklist() {
   const { t } = useTranslation();
   const { categorySlug, subServiceSlug } = useParams();
   const [previewDoc, setPreviewDoc] = useState(null);
+  const [showInstructionSheet, setShowInstructionSheet] = useState(false);
 
   const services = getLocalizedServices(t);
   const category = services[categorySlug];
@@ -38,6 +41,12 @@ function DocumentChecklist() {
         <div className="gn-checklist-heading">
           <span className="gn-checklist-icon"><Icon size={22} strokeWidth={1.6} /></span>
           <span className="gn-checklist-title font-display">{subService.label}</span>
+          {subService.instructionSheet && (
+            <InstructionSheetButton
+              onClick={() => setShowInstructionSheet(true)}
+              ariaLabel={t("instructionSheet.open", { service: subService.label })}
+            />
+          )}
         </div>
 
         {subService.documents.length === 0 ? (
@@ -76,6 +85,15 @@ function DocumentChecklist() {
             </button>
           </div>
         </div>
+      )}
+
+{showInstructionSheet && (
+        <InstructionSheetModal
+          categorySlug={categorySlug}
+          subServiceSlug={subServiceSlug}
+          serviceLabel={subService.label}
+          onClose={() => setShowInstructionSheet(false)}
+        />
       )}
     </div>
   );

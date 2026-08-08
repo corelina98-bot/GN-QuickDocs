@@ -16,16 +16,18 @@ const servicesData = {
     subServices: {
       "residence-certificate": {
         icon: "Home",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.0",
           "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.1",
           "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.2",
           "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.3",
-          "serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.4",
+"serviceContent.identity-verification-certificates.subServices.residence-certificate.documents.4",
         ],
       },
       "character-certificate": {
         icon: "ShieldCheck",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.0",
           "serviceContent.identity-verification-certificates.subServices.character-certificate.documents.1",
@@ -35,6 +37,7 @@ const servicesData = {
       },
       "income-certificate": {
         icon: "Wallet",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.0",
           "serviceContent.identity-verification-certificates.subServices.income-certificate.documents.1",
@@ -44,6 +47,7 @@ const servicesData = {
       },
       "life-certificate": {
         icon: "HeartPulse",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.0",
           "serviceContent.identity-verification-certificates.subServices.life-certificate.documents.1",
@@ -154,6 +158,7 @@ export function getLocalizedServices(t) {
         icon: sub.icon,
         label: t(`serviceContent.${categorySlug}.subServices.${subSlug}.label`),
         documents: (sub.documentKeys || []).map((key) => t(key)),
+        instructionSheet: sub.instructionSheet || false,
       };
     });
     localized[categorySlug] = locCategory;
