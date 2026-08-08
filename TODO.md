@@ -11,7 +11,7 @@
 8. [x] Install server dependencies.
 
 ## Frontend
-9. [x] Add `instructionSheet: true` to `residence-certificate` in `servicesData.js`.
+9. [x] Add `instructionSheet: true` to ALL 12 services in `servicesData.js`.
 10. [x] Create `client/src/services/instructionSheetService.js`.
 11. [x] Create `client/src/components/InstructionSheetButton.jsx`.
 12. [x] Create `client/src/components/InstructionSheetModal.jsx`.
@@ -20,6 +20,7 @@
 15. [x] Add `instructionSheet` strings to `en.json`, `si.json`, `ta.json`.
 
 ## Testing
-16. [x] Run seed (idempotent).
+16. [x] Run seed (idempotent) - all 12 PDFs generated/stored; second run skips duplicates.
 17. [x] Run server + client.
 18. [x] Verify all requirement checklist items.
+</content>

@@ -61,8 +61,9 @@ const servicesData = {
   "electoral-civil-registrations": {
     icon: "ScrollText",
     subServices: {
-      "voter-registration-electoral-roll": {
+"voter-registration-electoral-roll": {
         icon: "Vote",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.0",
           "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.1",
@@ -70,8 +71,9 @@ const servicesData = {
           "serviceContent.electoral-civil-registrations.subServices.voter-registration-electoral-roll.documents.3",
         ],
       },
-      "verification-birth-death-marriage": {
+"verification-birth-death-marriage": {
         icon: "FileCheck",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.electoral-civil-registrations.subServices.verification-birth-death-marriage.documents.0",
           "serviceContent.electoral-civil-registrations.subServices.verification-birth-death-marriage.documents.1",
@@ -84,8 +86,9 @@ const servicesData = {
   "land-permits-local-industry": {
     icon: "MapPin",
     subServices: {
-      "tree-felling-timber-transport": {
+"tree-felling-timber-transport": {
         icon: "TreePine",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.0",
           "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.1",
@@ -93,16 +96,18 @@ const servicesData = {
           "serviceContent.land-permits-local-industry.subServices.tree-felling-timber-transport.documents.3",
         ],
       },
-      "animal-cattle-transport": {
+"animal-cattle-transport": {
         icon: "PawPrint",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.0",
           "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.1",
           "serviceContent.land-permits-local-industry.subServices.animal-cattle-transport.documents.2",
         ],
       },
-      "event-public-loudspeaker": {
+"event-public-loudspeaker": {
         icon: "Megaphone",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.0",
           "serviceContent.land-permits-local-industry.subServices.event-public-loudspeaker.documents.1",
@@ -116,8 +121,9 @@ const servicesData = {
   "welfare-social-relief": {
     icon: "HandCoins",
     subServices: {
-      "social-welfare-application": {
+"social-welfare-application": {
         icon: "HeartHandshake",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.0",
           "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.1",
@@ -125,8 +131,9 @@ const servicesData = {
           "serviceContent.welfare-social-relief.subServices.social-welfare-application.documents.3",
         ],
       },
-      "disaster-compensation-damage": {
+"disaster-compensation-damage": {
         icon: "Umbrella",
+        instructionSheet: true,
         documentKeys: [
           "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.0",
           "serviceContent.welfare-social-relief.subServices.disaster-compensation-damage.documents.1",

@@ -66,7 +66,7 @@ const sheets = [
       "4. Proof of dependents - Birth certificates of children, if applicable.",
     ],
   },
-  {
+{
     serviceCategory: "identity-verification-certificates",
     service: "life-certificate",
     originalName: "Life Certificate Instruction Sheet.pdf",
@@ -79,6 +79,115 @@ const sheets = [
       "2. Pensioner Identity Card / Pension number details.",
       "3. Senior Citizen ID (if applicable).",
       "4. The person must appear in person - Or provide medical proof if bedridden.",
+    ],
+  },
+
+  // ---- electoral-civil-registrations ----
+  {
+    serviceCategory: "electoral-civil-registrations",
+    service: "voter-registration-electoral-roll",
+    originalName: "Voter Registration & Electoral Roll Updating Instruction Sheet.pdf",
+    filename: "voter-registration-electoral-roll-instruction-sheet.pdf",
+    description: "Instruction sheet for Voter Registration & Electoral Roll Updating",
+    title: "Voter Registration",
+    subtitle: "(Electoral Roll Updating)",
+    required: [
+      "1. National Identity Card (NIC) - Original and copy.",
+      "2. Birth Certificate.",
+      "3. Householder Register details.",
+      "4. Proof of residency for at least 1 year at the current address (e.g. Deed or utility bill).",
+    ],
+  },
+  {
+    serviceCategory: "electoral-civil-registrations",
+    service: "verification-birth-death-marriage",
+    originalName: "Verification for Birth, Death, or Marriage Registration Instruction Sheet.pdf",
+    filename: "verification-birth-death-marriage-instruction-sheet.pdf",
+    description: "Instruction sheet for Verification for Birth, Death, or Marriage Registration",
+    title: "Verification for Birth, Death, or Marriage",
+    subtitle: "(Registration)",
+    required: [
+      "1. For Birth: Hospital birth notification card, Parents' Marriage Certificate, Parents' NICs.",
+      "2. For Death: Hospital/Medical Cause of Death Certificate, Deceased's NIC.",
+      "3. For Marriage: NICs and Birth Certificates of both parties.",
+    ],
+  },
+
+  // ---- land-permits-local-industry ----
+  {
+    serviceCategory: "land-permits-local-industry",
+    service: "tree-felling-timber-transport",
+    originalName: "Tree Felling & Timber Transport Permits Instruction Sheet.pdf",
+    filename: "tree-felling-timber-transport-instruction-sheet.pdf",
+    description: "Instruction sheet for Tree Felling & Timber Transport Permits",
+    title: "Tree Felling & Timber Transport Permits",
+    subtitle: "(Land, Permits & Local Industry)",
+    required: [
+      "1. Land Deed / Grant Deed (Sinnakkara Deed) or Survey Plan.",
+      "2. Applicant's National Identity Card (NIC).",
+      "3. Boundaries declaration & neighbor consent statements (if close to boundary).",
+      "4. Timber cutting permit (if requesting transport permit).",
+    ],
+  },
+  {
+    serviceCategory: "land-permits-local-industry",
+    service: "animal-cattle-transport",
+    originalName: "Animal & Cattle Transport Permits Instruction Sheet.pdf",
+    filename: "animal-cattle-transport-instruction-sheet.pdf",
+    description: "Instruction sheet for Animal & Cattle Transport Permits",
+    title: "Animal & Cattle Transport Permits",
+    subtitle: "(Land, Permits & Local Industry)",
+    required: [
+      "1. Proof of livestock ownership / Farm registration.",
+      "2. Veterinary Health Certificate for animals.",
+      "3. Transportation vehicle details and destination address.",
+    ],
+  },
+  {
+    serviceCategory: "land-permits-local-industry",
+    service: "event-public-loudspeaker",
+    originalName: "Event & Public Loudspeaker Approvals Instruction Sheet.pdf",
+    filename: "event-public-loudspeaker-instruction-sheet.pdf",
+    description: "Instruction sheet for Event & Public Loudspeaker Approvals",
+    title: "Event & Public Loudspeaker Approvals",
+    subtitle: "(Land, Permits & Local Industry)",
+    required: [
+      "1. Written application detailing event date, time, and venue.",
+      "2. Applicant's National Identity Card (NIC).",
+      "3. Venue owner's consent letter.",
+      "4. Police station notification copy.",
+    ],
+  },
+
+  // ---- welfare-social-relief ----
+  {
+    serviceCategory: "welfare-social-relief",
+    service: "social-welfare-application",
+    originalName: "Social Welfare Application Verification Instruction Sheet.pdf",
+    filename: "social-welfare-application-instruction-sheet.pdf",
+    description: "Instruction sheet for Social Welfare Application Verification",
+    title: "Social Welfare Application Verification",
+    subtitle: "(Aswesuma, Pensions, Disability)",
+    required: [
+      "1. Applicant & family members' NIC copies.",
+      "2. Birth Certificates of dependents.",
+      "3. Medical reports/certificates (for disability or chronic illness aid).",
+      "4. Proof of income or unemployment declaration.",
+    ],
+  },
+  {
+    serviceCategory: "welfare-social-relief",
+    service: "disaster-compensation-damage",
+    originalName: "Disaster Compensation & Damage Assessment Instruction Sheet.pdf",
+    filename: "disaster-compensation-damage-instruction-sheet.pdf",
+    description: "Instruction sheet for Disaster Compensation & Damage Assessment",
+    title: "Disaster Compensation",
+    subtitle: "(Damage Assessment)",
+    required: [
+      "1. National Identity Card (NIC).",
+      "2. Photos of structural or agricultural damage.",
+      "3. Property deed or residency proof.",
+      "4. Police entry report (for fires or human-made accidents).",
     ],
   },
 ];
