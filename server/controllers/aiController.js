@@ -23,7 +23,7 @@ function getGroqConfig() {
   };
 }
 
-async function callGroq({ prompt, language }) {
+async function callGroq({ messages, language }) {
   const { apiKey, model } = getGroqConfig();
 
   // 30s timeout so a slow response does not hang the request.
@@ -44,7 +44,7 @@ async function callGroq({ prompt, language }) {
             role: "system",
             content: `You are a writing assistant. Respond in ${language || "English"}.`,
           },
-          { role: "user", content: prompt },
+          ...messages,
         ],
       }),
       signal: controller.signal,
@@ -81,9 +81,14 @@ async function callGroq({ prompt, language }) {
 }
 
 export const generateContent = async (req, res) => {
-  const { prompt, language } = req.body;
+  const { prompt, messages, language } = req.body;
   try {
-    const content = await callGroq({ prompt, language });
+    // Prefer an explicit conversation history; fall back to a single prompt
+    // for backward compatibility with the Dashboard initial question.
+    const history = Array.isArray(messages) && messages.length
+      ? messages
+      : [{ role: "user", content: prompt }];
+    const content = await callGroq({ messages: history, language });
     res.json({ result: content });
   } catch (error) {
     const status = error.status || 500;
@@ -96,7 +101,7 @@ export const generateContent = async (req, res) => {
 export const testAI = async (req, res) => {
   const { question } = req.body;
   try {
-    const content = await callGroq({ prompt: question || "Hello", language: "English" });
+    const content = await callGroq({ messages: [{ role: "user", content: question || "Hello" }], language: "English" });
     res.json({ success: true, message: content });
   } catch (error) {
     const status = error.status || 500;
