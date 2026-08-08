@@ -25,10 +25,10 @@ const seedLocations = async () => {
     const inserted = await Location.insertMany(locations);
     log(`Inserted ${inserted.length} provinces:`);
     inserted.forEach((p) => {
-      log(`  - ${p.name}: ${p.districts.length} districts`);
+      log(`  - ${p.name.en}: ${p.districts.length} districts`);
       p.districts.forEach((d) => {
         if (d.divisions && d.divisions.length > 0) {
-          log(`      ${d.name}: ${d.divisions.length} divisions`);
+          log(`      ${d.name.en}: ${d.divisions.length} divisions`);
         }
       });
     });

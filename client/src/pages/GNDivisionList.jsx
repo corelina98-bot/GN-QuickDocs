@@ -10,8 +10,16 @@ import "./GNDivisionList.css";
 // Fetches provinces (with their districts) from GET /api/locations.
 // The province dropdown lists all provinces, and the district dropdown
 // is filtered based on the currently selected province.
+// Returns the localized name for a given `name` object ({ en, si, ta })
+// based on the currently active language. Falls back to English.
+function localize(name, lng) {
+  if (!name) return "";
+  if (typeof name === "string") return name;
+  return name[lng] || name.en || "";
+}
+
 function GNDivisionList() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   const [locations, setLocations] = useState([]);
@@ -49,11 +57,13 @@ function GNDivisionList() {
     setGnDivision("");
   };
 
-  const selectedProvince = locations.find((loc) => loc.name === province);
+const selectedProvince = locations.find((loc) => loc._id === province);
   const districts = selectedProvince ? selectedProvince.districts : [];
 
-  // The selected district's nested GN divisions (districts are objects now).
-  const selectedDistrictData = districts.find((d) => d.name === district);
+  // Districts are objects; match by stable id (falling back to en name).
+  const selectedDistrictData = districts.find(
+    (d) => d._id === district || d.name?.en === district || d.name === district
+  );
   const divisions = selectedDistrictData ? selectedDistrictData.divisions : [];
 
   const handleSearch = (e) => {
@@ -92,10 +102,10 @@ function GNDivisionList() {
           <form className="gn-filter-form" onSubmit={handleSearch}>
             <label className="gn-filter-row">
               <span>{t("gnList.province")}</span>
-              <select value={province} onChange={handleProvinceChange}>
+<select value={province} onChange={handleProvinceChange}>
                 <option value="">—</option>
                 {locations.map((p) => (
-                  <option key={p._id} value={p.name}>{p.name}</option>
+                  <option key={p._id} value={p._id}>{localize(p.name, i18n.language)}</option>
                 ))}
               </select>
             </label>
@@ -104,8 +114,8 @@ function GNDivisionList() {
               <span>{t("gnList.district")}</span>
               <select value={district} onChange={handleDistrictChange}>
                 <option value="">—</option>
-                {districts.map((d) => (
-                  <option key={d.name} value={d.name}>{d.name}</option>
+{districts.map((d) => (
+                  <option key={d.name?.en || d.name} value={d.name?.en || d.name}>{localize(d.name, i18n.language)}</option>
                 ))}
               </select>
             </label>
@@ -114,8 +124,8 @@ function GNDivisionList() {
               <span>{t("gnList.gnDivision")}</span>
               <select value={gnDivision} onChange={(e) => setGnDivision(e.target.value)}>
                 <option value="">—</option>
-                {divisions.map((g) => (
-                  <option key={g._id || g.code} value={g.name}>{g.name}</option>
+{divisions.map((g) => (
+                  <option key={g._id || g.code} value={g._id || g.code}>{localize(g.name, i18n.language)}</option>
                 ))}
               </select>
             </label>

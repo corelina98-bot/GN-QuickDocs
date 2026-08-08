@@ -1,0 +1,15 @@
+MongoDB Connected
+DB name: gn-quickdocs
+Cleared existing locations
+Inserted 9 provinces:
+  - Western: 3 districts
+      Colombo: 98 divisions
+  - Central: 3 districts
+  - Southern: 3 districts
+  - Northern: 5 districts
+  - Eastern: 3 districts
+  - North Western: 2 districts
+  - North Central: 2 districts
+  - Uva: 2 districts
+  - Sabaragamuwa: 2 districts
+Seed complete. Connection closed.
