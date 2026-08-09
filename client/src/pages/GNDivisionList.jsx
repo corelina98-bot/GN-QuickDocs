@@ -82,7 +82,7 @@ const selectedProvince = locations.find((loc) => loc._id === province);
       />
 
       <div className="gn-page-body gn-gnlist-body">
-        <div className="gn-search-row">
+        {/* <div className="gn-search-row">
           <Search size={18} className="gn-search-icon" />
           <input
             type="text"
@@ -91,7 +91,7 @@ const selectedProvince = locations.find((loc) => loc._id === province);
             placeholder={t("common.search")}
             className="gn-search-input"
           />
-        </div>
+        </div> */}
 
         <h2 className="gn-browse-heading font-display">{t("gnList.browseHeading")}</h2>
 

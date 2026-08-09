@@ -15,7 +15,7 @@ function GNDetails() {
   const [details] = useState({
     name: "",
     contactNo: "",
-    email: "",
+    address: "",
     availableDates: "",
     // Placeholder coordinates — replace with the real GN office location.
     lat: 6.9271,
@@ -47,9 +47,9 @@ function GNDetails() {
             <input type="text" value={details.contactNo} readOnly />
           </div>
           <div className="gn-details-row">
-            <span className="gn-details-label">{t("gnDetails.email")}</span>
+            <span className="gn-details-label">{t("gnDetails.address")}</span>
             <span>:</span>
-            <input type="text" value={details.email} readOnly />
+            <input type="text" value={details.address} readOnly />
           </div>
           <div className="gn-details-row">
             <span className="gn-details-label">{t("gnDetails.availableDates")}</span>
