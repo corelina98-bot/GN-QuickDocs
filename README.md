@@ -1,4 +1,4 @@
-# 🇱🇰 GN QuickDocs
+# GN QuickDocs
 
 ### AI-Powered Digital Assistant for Grama Niladhari Services
 
