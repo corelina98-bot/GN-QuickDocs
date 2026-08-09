@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Search } from "lucide-react";
 import Header from "../components/Header";
 import api from "../api/axios";
 import "./GNDivisionList.css";
@@ -26,10 +25,10 @@ function GNDivisionList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const [province, setProvince] = useState("");
+const [province, setProvince] = useState("");
   const [district, setDistrict] = useState("");
   const [gnDivision, setGnDivision] = useState("");
+  const [formError, setFormError] = useState("");
 
   useEffect(() => {
     const fetchLocations = async () => {
@@ -66,10 +65,32 @@ const selectedProvince = locations.find((loc) => loc._id === province);
   );
   const divisions = selectedDistrictData ? selectedDistrictData.divisions : [];
 
-  const handleSearch = (e) => {
+const handleSearch = (e) => {
     e.preventDefault();
-    navigate("/grama-niladhari/details", {
-      state: { province, district, gnDivision, searchTerm },
+
+    // Require all three selections before allowing navigation.
+    if (!province || !district || !gnDivision) {
+      setFormError(t("gnList.requiredSelection"));
+      return;
+    }
+    setFormError("");
+
+    // Find the selected GN division to carry its officer data to details.
+    const selectedDivision = divisions.find(
+      (g) => g._id === gnDivision || g.code === gnDivision
+    );
+
+navigate("/grama-niladhari/details", {
+      state: {
+        province,
+        district,
+        gnDivision,
+        divisionName: selectedDivision
+          ? localize(selectedDivision.name, i18n.language)
+          : "",
+        officerName: selectedDivision?.officerName || "",
+        contactNo: selectedDivision?.contactNo || "",
+      },
     });
   };
 
@@ -81,18 +102,7 @@ const selectedProvince = locations.find((loc) => loc._id === province);
         showBack
       />
 
-      <div className="gn-page-body gn-gnlist-body">
-        <div className="gn-search-row">
-          <Search size={18} className="gn-search-icon" />
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={t("common.search")}
-            className="gn-search-input"
-          />
-        </div>
-
+<div className="gn-page-body gn-gnlist-body">
         <h2 className="gn-browse-heading font-display">{t("gnList.browseHeading")}</h2>
 
         {loading && <p className="gn-list-status">Loading locations…</p>}
@@ -130,7 +140,8 @@ const selectedProvince = locations.find((loc) => loc._id === province);
               </select>
             </label>
 
-            <button type="submit" className="gn-search-submit">{t("common.search")}</button>
+<button type="submit" className="gn-search-submit">{t("common.search")}</button>
+            {formError && <p className="gn-list-error">{formError}</p>}
           </form>
         )}
       </div>

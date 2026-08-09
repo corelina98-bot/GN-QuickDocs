@@ -1,9 +1,9 @@
 // GN Divisions for Colombo District (DS Division 1)
 export const colomboDivisions = [
-  { code: "005", name: { si: "සම්මන්ත්‍රණපුර", en: "Sammantranapura", ta: "சம்மந்திரணபுர" } },
-  { code: "010", name: { si: "මට්ටක්කුලිය", en: "Mattakkuliya", ta: "மட்டக்குளி" } },
-  { code: "015", name: { si: "මෝදර", en: "Modara", ta: "மோதர" } },
-  { code: "020", name: { si: "මාදම්පිටිය", en: "Madampitiya", ta: "மாதம்பிட்டிய" } },
+{ code: "005", name: { si: "සම්මන්ත්‍රණපුර", en: "Sammantranapura", ta: "சம்மந்திரணபுர" }, officerName: { en: "Mr. A.M. Sahabdeen", si: "ඒ.එම්. ෂහාබ්ඩීන් මහතා", ta: "திரு. ஏ.எம். ஷாப்தீன்" }, contactNo: "+94 773 329 148" },
+  { code: "010", name: { si: "මට්ටක්කුලිය", en: "Mattakkuliya", ta: "மட்டக்குளி" }, officerName: { en: "Ms. S.J.Mohan", si: "එස්.ජේ. මොහාන් මෙනවිය", ta: "திருமதி. எஸ்.ஜே. மோஹன்" }, contactNo: "+94 713 487 754" },
+  { code: "015", name: { si: "මෝදර", en: "Modara", ta: "மோதர" }, officerName: { en: "Ms. K.L.C.N. Perera", si: "කේ.එල්.සී.එන්. පෙරේරා මෙනවිය", ta: "திருமதி. கே.எல்.சி.என். பெரேரா" }, contactNo: "+94 718 436 013" },
+  { code: "020", name: { si: "මාදම්පිටිය", en: "Madampitiya", ta: "மாதம்பிட்டிய" }, officerName: { en: "Mr. Anura Handapangoda", si: "අනුර හඳපාන්ගොඩ මහතා", ta: "திரு. அனுர ஹந்தபாங்கொட" }, contactNo: "+94 773 239 240" },
   { code: "025", name: { si: "මහවත්ත", en: "Mahawatta", ta: "மகாவத்த" } },
   { code: "030", name: { si: "අළුත්මාවත", en: "Aluthmawatha", ta: "அலுத்மாவத்த" } },
   { code: "035", name: { si: "ලුණුපොකුණ", en: "Lunupokuna", ta: "லுணுபொகுண" } },

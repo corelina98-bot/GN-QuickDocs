@@ -8,30 +8,6 @@
   min-height: 100%;
 }
 
-.gn-search-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-pill);
-  padding: 10px 16px;
-  max-width: 420px;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-.gn-search-icon { color: var(--ink-soft); flex-shrink: 0; }
-
-.gn-search-input {
-  flex: 1;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 14px;
-  color: var(--ink);
-}
-
 .gn-browse-heading {
   font-size: 18px;
   margin-bottom: 20px;
@@ -91,11 +67,6 @@
 
 /* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 640px) {
-  .gn-search-row {
-    margin-bottom: 20px;
-    padding: 9px 14px;
-  }
-
   .gn-browse-heading {
     font-size: 16px;
     margin-bottom: 16px;
