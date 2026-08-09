@@ -10,10 +10,21 @@ const nameSchema = new mongoose.Schema(
   { _id: false }
 );
 
+const officerNameSchema = new mongoose.Schema(
+  {
+    en: { type: String, default: "" },
+    si: { type: String, default: "" },
+    ta: { type: String, default: "" },
+  },
+  { _id: false }
+);
+
 const divisionSchema = new mongoose.Schema(
   {
     code: { type: String },
     name: { type: nameSchema, required: true },
+    officerName: { type: officerNameSchema, default: { en: "", si: "", ta: "" } },
+    contactNo: { type: String, default: "" },
   },
   { _id: false }
 );
