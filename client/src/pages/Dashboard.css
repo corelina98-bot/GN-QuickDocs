@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   gap: 56px;
-  padding-top: 36px;
+  padding-top: 40px;
+  border: 1px solid var(--teal-300);
+  border-top: none;
 }
 
 .gn-dashboard-tiles {
