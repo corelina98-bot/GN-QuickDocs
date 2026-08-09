@@ -49,8 +49,8 @@
 }
 
 .gn-welcome-logo-circle {
-  width: 190px;
-  height: 190px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background: var(--white);
   display: flex;
@@ -69,7 +69,7 @@
 
 .gn-welcome-logo-text {
   font-family: var(--font-display);
-  font-size: 44px;
+  font-size: 100px;
   font-weight: 600;
   color: var(--teal-700);
   line-height: 1;
@@ -77,25 +77,26 @@
 
 .gn-welcome-logo-sub {
   margin-top: 6px;
-  font-size: 11px;
+  font-size: 24px;
   letter-spacing: 3px;
   color: var(--teal-600);
   font-weight: 600;
 }
 
 .gn-welcome-title {
-  font-size: 56px;
+  font-size: 130px;
   letter-spacing: 6px;
-  color: #16262b;
+  color: #3f97a3;
   margin: 0;
+  text-shadow: 0 0 5px rgba(255,255,255,0.85);
   transition: transform 0.35s ease, text-shadow 0.35s ease, color 0.35s ease;
 }
 
 .gn-welcome-title:hover,
 .gn-welcome:focus-visible .gn-welcome-title {
   transform: scale(1.05);
-  color: #ffffff;
-  text-shadow: 0 0 24px rgba(255,255,255,0.85);
+  color:#16262b;
+  text-shadow: 0 0 25px rgba(255,255,255,0.85);
 }
 
 .gn-welcome-hint {
@@ -115,26 +116,26 @@
   }
 
   .gn-welcome-logo-circle {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 
   .gn-welcome-logo-text {
-    font-size: 30px;
+    font-size: 70px;
   }
 
   .gn-welcome-logo-sub {
-    font-size: 9px;
+    font-size: 15px;
     letter-spacing: 2px;
   }
 
   .gn-welcome-title {
-    font-size: 34px;
-    letter-spacing: 3px;
+    font-size: 60px;
+    letter-spacing: 3.5px;
   }
 
   .gn-welcome-hint {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
