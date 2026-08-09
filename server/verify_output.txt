@@ -1,0 +1,52 @@
+Database name: gn-quickdocs
+Collections: locations, instructionSheets.files, documents, instructionSheets.chunks, instructionsheets, users
+Total provinces: 9
+
+Province: Western
+  District: Colombo (98 divisions)
+    005 සම්මන්ත්‍රණපුර
+    010 මට්ටක්කුලිය
+    015 මෝදර
+    020 මාදම්පිටිය
+    025 මහවත්ත
+    ... and 93 more
+  District: Gampaha (0 divisions)
+  District: Kalutara (0 divisions)
+
+Province: Central
+  District: Kandy (0 divisions)
+  District: Matale (0 divisions)
+  District: Nuwara Eliya (0 divisions)
+
+Province: Southern
+  District: Galle (0 divisions)
+  District: Matara (0 divisions)
+  District: Hambantota (0 divisions)
+
+Province: Northern
+  District: Jaffna (0 divisions)
+  District: Kilinochchi (0 divisions)
+  District: Mannar (0 divisions)
+  District: Mullaitivu (0 divisions)
+  District: Vavuniya (0 divisions)
+
+Province: Eastern
+  District: Trincomalee (0 divisions)
+  District: Batticaloa (0 divisions)
+  District: Ampara (0 divisions)
+
+Province: North Western
+  District: Kurunegala (0 divisions)
+  District: Puttalam (0 divisions)
+
+Province: North Central
+  District: Anuradhapura (0 divisions)
+  District: Polonnaruwa (0 divisions)
+
+Province: Uva
+  District: Badulla (0 divisions)
+  District: Monaragala (0 divisions)
+
+Province: Sabaragamuwa
+  District: Ratnapura (0 divisions)
+  District: Kegalle (0 divisions)
