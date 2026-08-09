@@ -12,11 +12,12 @@ function AIAssistant() {
   const location = useLocation();
   const initialQuestion = location.state?.question ?? "";
 
-  const [messages, setMessages] = useState([]);
+const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const bottomRef = useRef(null);
+  const initialSentRef = useRef(false);
 
   // Send a message (appends the user message, then calls the API with full history).
   const sendMessage = async (text) => {
@@ -49,9 +50,12 @@ function AIAssistant() {
     sendMessage();
   };
 
-  // Auto-send the question carried over from the Dashboard on first mount.
+// Auto-send the question carried over from the Dashboard on first mount.
+  // Guard against React StrictMode double-invoking this effect (which would
+  // otherwise send the same question to the AI twice, producing two responses).
   useEffect(() => {
-    if (initialQuestion) {
+    if (initialQuestion && !initialSentRef.current) {
+      initialSentRef.current = true;
       sendMessage(initialQuestion);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
